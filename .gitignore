@@ -102,3 +102,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+#CUSTOM pycharm project config files
+.idea/
