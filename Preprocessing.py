@@ -14,10 +14,11 @@ import cv2
 #Preprocessing Step:
 #Inputs:
 #I: Raw Image
+#[line_spacing = 7/8]: spacing between each line multiplied by average height of the line
 #Outputs:
 #Binary Image containing all text compact
 
-def Preprocessing(I):
+def Preprocessing(I, line_spacing=7/8):
     #Load image and covert it to grayscale
     I = colors.rgb2gray(I)
 
@@ -141,6 +142,9 @@ def Preprocessing(I):
         #Convert Binary (negative) image to boolean so we can do logical operations on it
         Line_extracted = (Line_extracted!=0)
 
+        #save widths so we will able to get the minimum 
+        widths = []
+
         for cnt in contours[::-1]:
             (x, y, ww, hh) = cv2.boundingRect(cnt)
         
@@ -160,19 +164,22 @@ def Preprocessing(I):
                 h_total = h_total + hh
                 n = n + 1
     
-                if start_x>=width_per_line:
-                    start_y = start_y + int(7*h_total / (8*n))
+                #Start new line in the compact image
+                if start_x >=width_per_line:
+                    widths.append(start_x)
+                    start_y = start_y + int(line_spacing * h_total / n)
                     start_x = 50
                     h_total = 0
                     n = 0
+
        
 
 
     #Remove empty space
     start_x = (I_Compact.sum(axis=0) != 0).argmax()
     start_y = (I_Compact.sum(axis=1) != 0).argmax()
-    end_x = 2*w - (I_Compact.sum(axis=0)[::-1] != 0).argmax()
-    end_y = 2*h - (I_Compact.sum(axis=1)[::-1] != 0).argmax()
+    end_x = np.min(widths) 
+    end_y = 2*h - (I_Compact.sum(axis=1)[::-1] != 0).argmax() - int(line_spacing* h_total / n)
     I_Compact = I_Compact[start_y:end_y, start_x:end_x] 
 
     #Convert image to back normal binary image
@@ -182,8 +189,21 @@ def Preprocessing(I):
 
     #Uncomment if you want to see the output
     #I2 = np.array(I_Compact * 255, dtype = np.uint8) 
-    #io.imsave('output.jpg',I2)
+    #io.imshow(I2)
+    #io.show()
     
     return I_Compact
 
 
+
+#Modeule test 
+if __name__ == "__main__":
+    I_Compact = Preprocessing(io.imread("j04-070.png"))
+    I2 = np.array(I_Compact * 255, dtype = np.uint8) 
+    io.imsave('output.jpg',I2)
+
+    #LBP Test... not ready yet
+    I_LBP = np.uint8(feature.local_binary_pattern(I2, 8, 1))
+    n_bins = I_LBP.max()+1
+    graphs.hist(I_LBP.ravel(), bins=n_bins, range = (0,n_bins),facecolor='0.5')
+    graphs.show()
