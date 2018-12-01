@@ -54,10 +54,8 @@ def Preprocessing(I, line_spacing=1/2, block_size=(200, 250)):
     h_total = 0
     n = 0
 
-    #Convert Binary image to negative image so we can do logical operations on it
-    negative_I = 255 - I
     
-    I_Compact = np.zeros((h,w), dtype=np.uint8) 
+    I_Compact = 255 - np.zeros((h,w), dtype=np.uint8) 
 
     for cnt in contours[::-1]:
         (x, y, ww, hh) = cv2.boundingRect(cnt)
@@ -72,7 +70,7 @@ def Preprocessing(I, line_spacing=1/2, block_size=(200, 250)):
             begin_y = start_y - int(np.ceil(center[0]))
 
             #Elementwise OR on negative image
-            I_Compact[begin_y:begin_y + hh, start_x:start_x + ww] = np.maximum(negative_I[y:y + hh, x:x + ww], I_Compact[begin_y:begin_y + hh, start_x:start_x + ww])
+            I_Compact[begin_y:begin_y + hh, start_x:start_x + ww] = np.minimum(I[y:y + hh, x:x + ww], I_Compact[begin_y:begin_y + hh, start_x:start_x + ww])
             
             start_x = start_x + ww
             h_total = h_total + hh
@@ -90,9 +88,8 @@ def Preprocessing(I, line_spacing=1/2, block_size=(200, 250)):
                     end_y = start_y
                     start_y = 100 
                     I_Compact = I_Compact[100:end_y, 50:end_x].copy()
-                    I_Compact = 255 - np.uint8(I_Compact)
                     texture_blocks.append(I_Compact)
-                    I_Compact = np.zeros((h,w), dtype=np.uint8) 
+                    I_Compact = 255 - np.zeros((h,w), dtype=np.uint8) 
     
     
 
@@ -106,7 +103,7 @@ def Preprocessing(I, line_spacing=1/2, block_size=(200, 250)):
 
 #Modeule test 
 if __name__ == "__main__":
-    blocks = Preprocessing(io.imread("a02-072.png"))
+    blocks = Preprocessing(io.imread("Test\\2_2.png"))
     for block in blocks:
         io.imshow(block)
         io.show()
