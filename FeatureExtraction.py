@@ -4,14 +4,6 @@ from skimage.feature import greycomatrix
 import skimage.io as io
 from skimage.color import rgb2gray
 
-<<<<<<< HEAD
-def getFeatureVector(textureBlock, n_bins):
-	I_LBP = np.uint8(local_binary_pattern(textureBlock, P=8, R=3))
-	#n_bins = I_LBP.max() + 1
-	hist, bin_edges = np.histogram(I_LBP.ravel(), np.r_[0:n_bins])
-	return hist
-=======
-
 def getFeatureVector(textureBlock, method=1):
     """
     method: integer
@@ -76,4 +68,3 @@ if __name__ == '__main__':
     test_img = rgb2gray(test_img)
     feature = get_CSLBCoP_vector(test_img)
     print("Feature vector:", feature)
->>>>>>> ce866a33307d2b8f88c7b05ffe310c32104d6e17

@@ -17,20 +17,11 @@ def processTestImages(dataPath):
 	global testWriterFileName
 	X=[]
 	Y=[]
-<<<<<<< HEAD
 	test_img = io.imread(join(dataPath, testWriterFileName))
 	textureBlocks = Preprocessing(test_img)
 	# for textureBlock in textureBlocks:
 	X.append(getFeatureVector(textureBlocks, 256))
 	Y.append(str(testWriterFileName).split('_')[0])
-=======
-	for i in range(len(fileNames)):
-		training_img = io.imread(join(dataPath, fileNames[i]))
-		textureBlocks = Preprocessing(training_img)
-		#for textureBlock in textureBlocks:
-		X.append(getFeatureVector(textureBlocks))
-		Y.append(fileNames[i].split('_')[0])
->>>>>>> ce866a33307d2b8f88c7b05ffe310c32104d6e17
 	return X,Y
 
 def processTrainingImages(dataPath, numWriters):
