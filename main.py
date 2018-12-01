@@ -34,12 +34,15 @@ def processImages(dataPath):
 
 def processTestImages(dataPath):
 	global testWriterFileName
-	X=[]
+	X=None
 	Y=[]
 	test_img = io.imread(join(dataPath, testWriterFileName))
 	textureBlocks = Preprocessing(test_img)
 	for textureBlock in textureBlocks:
-		X.append(getFeatureVector(textureBlock))
+		if X is not None:
+			X = np.concatenate([X, getFeatureVector(textureBlock)], axis=0)
+		else:
+			X = getFeatureVector(textureBlock)
 		Y.append(str(testWriterFileName).split('_')[0])
 	return X,Y
 
@@ -59,20 +62,22 @@ def processTrainingImages(dataPath, numWriters):
 		rndmWriters.append(availableWriters[rndmWriter])
 		availableWriters.pop(rndmWriter)
 
-	X=[]
+	X=None
 	Y=[]
 	for i in range(3):
 		writerForms=[f for f in fileNames if f.startswith(i)]
 		availableForms = list(range(writerForms))
 
-		#Process first writer form
-		for i in range(2):
+		for j in range(2):
 			rndmForm = random.randint(0,len(availableForms))
 			form = writerForms[availableForms[rndmForm]]
 			training_img = io.imread(join(dataPath, form))
 			textureBlocks = Preprocessing(training_img)
 			for textureBlock in textureBlocks:
-				X.append(getFeatureVector(textureBlock))
+				if X is not None:
+					X = np.concatenate([X, getFeatureVector(textureBlock)], axis=0)
+				else:
+					X = getFeatureVector(textureBlock)
 				Y.append(i)
 			availableForms.pop()
 
