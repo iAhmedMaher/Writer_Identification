@@ -24,9 +24,9 @@ def processImages(dataPath):
 		textureBlocks = Preprocessing(test_img)
 		for textureBlock in textureBlocks:
 			if X is not None:
-				X = np.concatenate([X, getFeatureVector(textureBlock)] , axis=0)
+				X = np.concatenate([X, getFeatureVector(textureBlock, 0)] , axis=0)
 			else:
-				X = getFeatureVector(textureBlock)
+				X = getFeatureVector(textureBlock, 0)
 			print("*****************************")
 			Y.append(f.split('_')[0])
 	print(Y)
@@ -94,7 +94,7 @@ if __name__ == '__main__':
 
 	print("# X training:", len(X_Train))
 
-	adaboost_clf(Y_Train, X_Train, numClassifiers=50, learnRate=1.5, clfNum=2)
+	adaboost_clf(Y_Train, X_Train, numClassifiers=50, learnRate=1.5, clfNum=3)
 
 	print("Boosted")
 
