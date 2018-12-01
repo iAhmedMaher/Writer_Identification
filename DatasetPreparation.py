@@ -38,4 +38,6 @@ def rename_images():
 
                     os.rename(filename, new_filename)
 
-rename_images()
+
+if __name__ == '__main__':
+    rename_images()
