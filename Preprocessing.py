@@ -180,9 +180,10 @@ def Preprocessing(I):
 
     ''' CONNECTED COMPOMENTS END '''
 
-
-    I2 = np.array(I_Compact * 255, dtype = np.uint8) 
-    io.imsave('output.jpg',I2)
-
+    #Uncomment if you want to see the output
+    #I2 = np.array(I_Compact * 255, dtype = np.uint8) 
+    #io.imsave('output.jpg',I2)
+    
+    return I_Compact
 
 
