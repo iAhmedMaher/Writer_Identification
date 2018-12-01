@@ -15,10 +15,11 @@ import cv2
 #Inputs:
 #I: Raw Image
 #[line_spacing = 1/2]: spacing between each line multiplied by average height of the line
+#[block_size = (128, 256)]: Block size (height, width)
 #Outputs:
-#List of 2D greyscale Blocks
+#List of 2D binary Blocks
 
-def Preprocessing(I, line_spacing=1/2):
+def Preprocessing(I, line_spacing=1/2, block_size=(200, 250)):
     #Load image and covert it to grayscale
     I = colors.rgb2gray(I)
 
@@ -55,18 +56,8 @@ def Preprocessing(I, line_spacing=1/2):
 
     #Convert Binary image to negative image so we can do logical operations on it
     negative_I = 255 - I
-
-    #Estimate width and height of I_Compact
-    sum_a = 0 #sum of widths of all connected components
-   
-
-    for a in [cv2.boundingRect(cnt)[2]*cv2.boundingRect(cnt)[3] for cnt in contours]:
-        if a >  100:
-            sum_a += a
-  
-    estimate_length = int(np.sqrt(sum_a))
     
-    I_Compact = np.zeros((3*estimate_length,3*estimate_length), dtype=np.uint8) 
+    I_Compact = np.zeros((h,w), dtype=np.uint8) 
 
     for cnt in contours[::-1]:
         (x, y, ww, hh) = cv2.boundingRect(cnt)
@@ -88,27 +79,34 @@ def Preprocessing(I, line_spacing=1/2):
             n = n + 1
     
             #Start new line in the compact image
-            if start_x >= estimate_length:
+            if start_x >= block_size[1]+20:
                 widths.append(start_x)
                 start_y = start_y + int(line_spacing * h_total / n)
                 start_x = 50
                 h_total = 0
                 n = 0
+                if start_y >= block_size[0] + 20:
+                    end_x = np.min(widths)
+                    end_y = start_y
+                    start_y = 100 
+                    I_Compact = I_Compact[100:end_y, 50:end_x].copy()
+                    I_Compact = 255 - np.uint8(I_Compact)
+                    texture_blocks.append(I_Compact)
+                    I_Compact = np.zeros((h,w), dtype=np.uint8) 
     
     
-    end_x = np.min(widths)
-    end_y = start_y
 
-    I_Compact = I_Compact[100:end_y, 50:end_x].copy()
 
     ''' CONNECTED COMPOMENTS END '''
 
-    I_Compact = 255 - np.uint8(I_Compact)
-    return I_Compact
+    
+    return texture_blocks
 
 
 
 #Modeule test 
 if __name__ == "__main__":
-    I_Compact = Preprocessing(io.imread("a05-089.png"))
-    io.imsave("output.jpg",I_Compact)
+    blocks = Preprocessing(io.imread("a02-072.png"))
+    for block in blocks:
+        io.imshow(block)
+        io.show()
