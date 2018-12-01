@@ -18,10 +18,13 @@ def getFeatureVector(textureBlock, method=1):
         I_LBP = np.uint8(local_binary_pattern(textureBlock, 8, 1))
         # n_bins = I_LBP.max() + 1
         hist, bin_edges = np.histogram(I_LBP.ravel(), np.r_[0:256])  # ALERT
-        vector = hist
+        vector = hist.reshape(1, -1)
 
     elif method == 1:
         vector = get_CSLBCoP_vector(textureBlock)
+
+    elif method == 2:
+        vector = LPQ(textureBlock,3)
 
     else:
         raise AttributeError()
@@ -37,7 +40,7 @@ def LPQ(textureBlock, winSize=3):
     sigmaA = 8 / (winSize - 1)
 
 
-    img = float(textureBlock)
+    img = textureBlock.astype(np.float)
     radius = (winSize - 1) / 2
     x = np.arange(-radius, radius + 1)  # Form spatial coordinates in window
     r = np.arange(1,
@@ -104,7 +107,7 @@ def LPQ(textureBlock, winSize=3):
     # And finally build the histogram:
     h, b = np.histogram(B, bins=256, range=(0, 255))
 
-    return h
+    return h.reshape(1, -1) # return rows
 
 def euc_dist(X):
     Y = X = X.astype(np.float)
@@ -155,7 +158,7 @@ def get_CSLBCoP_vector(img_block):
 if __name__ == '__main__':
 
     print("Basic test:")
-    test_img = io.imread(r"D:\Projects\Pattern_Recognition\Writer_Identification\test_CSLBCoP.PNG")
+    test_img = io.imread(r"E:\CUFE CHS\Semester 9 (Senior 2)\Pattern Recognition\Project\Writer_Identification\test_CSLBCoP.PNG")
     test_img = rgb2gray(test_img)
     feature = get_CSLBCoP_vector(test_img)
     print("Feature vector:", feature)

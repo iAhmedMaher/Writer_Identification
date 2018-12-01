@@ -33,7 +33,6 @@ def processImages(dataPath):
     print(Y)
     return X, np.array(Y)
 
-
 def processTestImages(dataPath):
     global testWriterFileName
     X = None

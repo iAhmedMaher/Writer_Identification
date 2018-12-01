@@ -105,3 +105,4 @@ venv.bak/
 
 #CUSTOM pycharm project config files
 .idea/
+handwritten_dataset/
