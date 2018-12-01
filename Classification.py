@@ -6,6 +6,7 @@ from sklearn.ensemble import AdaBoostClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
 
 # The trained classifier to be used for prediction
 clf=None
@@ -15,6 +16,7 @@ Y_test: The target values for the test set. -
 X_test: The input features for the test set.
 """
 def predict_clf(Y_test, X_test):
+	global clf
 	prediction = clf.staged_predict(X_test)
 	print("This paper belongs to class "+str(prediction))
 	if(Y_test==prediction):
@@ -35,7 +37,8 @@ def adaboost_clf(Y_train, X_train, numClassifiers, learnRate, clfNum):
 	def classifiers(clfNum):
 		switcher = {
 			1: DecisionTreeClassifier(max_depth=1, random_state=1),
-			2: KNeighborsClassifier(n_neighbors=5) #Can add weights='distance'
+			2: KNeighborsClassifier(n_neighbors=3), #Can add weights='distance',
+			3: SVC(C=1.0,kernel='linear')
 		}
 	clf = classifiers.get(clfNum,None)
 
