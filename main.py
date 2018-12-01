@@ -20,7 +20,7 @@ def processImages(dataPath):
 		training_img = io.imread(join(dataPath, fileNames[i]))
 		textureBlocks = Preprocessing(training_img)
 		#for textureBlock in textureBlocks:
-		X.append(getFeatureVector(textureBlocks, 256))
+		X.append(getFeatureVector(textureBlocks))
 		Y.append(fileNames[i].split('_')[0])
 	return X,Y
 
