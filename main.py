@@ -44,7 +44,7 @@ def processTestImages(dataPath):
 		else:
 			X = getFeatureVector(textureBlock)
 		Y.append(str(testWriterFileName).split('_')[0])
-	return X,Y
+	return X,np.array(Y)
 
 def processTrainingImages(dataPath, numWriters):
 	global testWriterFileName
@@ -53,9 +53,9 @@ def processTrainingImages(dataPath, numWriters):
 	availableWriters=list(range(numWriters))
 	rndmWriters = []
 	while(len(rndmWriters)<3):
-		rndmWriter = random.randint(0, len(availableWriters))
+		rndmWriter = random.randint(0, len(availableWriters)-1)
 		#Chosen writer must have at least 2 forms
-		writerForms = [f for f in fileNames if f.startswith(availableWriters[rndmWriter])]
+		writerForms = [f for f in fileNames if f.startswith(str(availableWriters[rndmWriter]))]
 		if (len(writerForms) <= 1 and len(rndmWriters)<2) or (len(writerForms)<=2 and len(rndmWriters)==2):
 			availableWriters.pop(rndmWriter)
 			continue
@@ -65,11 +65,11 @@ def processTrainingImages(dataPath, numWriters):
 	X=None
 	Y=[]
 	for i in range(3):
-		writerForms=[f for f in fileNames if f.startswith(i)]
-		availableForms = list(range(writerForms))
+		writerForms=[f for f in fileNames if f.startswith(str(rndmWriters[i]))]
+		availableForms = list(range(len(writerForms)))
 
 		for j in range(2):
-			rndmForm = random.randint(0,len(availableForms))
+			rndmForm = random.randint(0,len(availableForms)-1)
 			form = writerForms[availableForms[rndmForm]]
 			training_img = io.imread(join(dataPath, form))
 			textureBlocks = Preprocessing(training_img)
@@ -78,24 +78,28 @@ def processTrainingImages(dataPath, numWriters):
 					X = np.concatenate([X, getFeatureVector(textureBlock)], axis=0)
 				else:
 					X = getFeatureVector(textureBlock)
-				Y.append(i)
+				Y.append(form.split("_")[0])
 			availableForms.pop()
 
 		if i==2:
 			rndmForm = random.randint(0, len(availableForms))
 			testWriterFileName = writerForms[availableForms[rndmForm]]
 
-	return X,Y
+	return X,np.array(Y)
 
 """Main Function"""
 if __name__ == '__main__':
 	trainingDataPath = "Training"
 	testDataPath = "Test"
+	rndmDataPath = "handwritten_dataset"
 
 	print("Getting Images")
 
-	X_Train,Y_Train = processImages(trainingDataPath)
-	X_Test, Y_Test = processImages(testDataPath)
+	#X_Train,Y_Train = processImages(trainingDataPath)
+	#X_Test, Y_Test = processImages(testDataPath)
+
+	X_Train, Y_Train = processTrainingImages(rndmDataPath, 671)
+	X_Test, Y_Test = processTestImages(rndmDataPath)
 
 	print("# X training:", len(X_Train))
 
