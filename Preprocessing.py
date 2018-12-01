@@ -6,9 +6,6 @@ import matplotlib.pyplot as graphs
 import numpy as np
 import cv2
 
-
-import os
-
 #IMPORTANT NOTE: 
 #all points in my code are expressed as tuples of format (y, x)
 #all rectangles, expect those returned by build-in openCV functions, are defined as tuple of 2 points (P1,P2) 
@@ -19,7 +16,7 @@ import os
 #I: Raw Image
 #[line_spacing = 1/2]: spacing between each line multiplied by average height of the line
 #Outputs:
-#List of 2D binary Blocks
+#List of 2D greyscale Blocks
 
 def Preprocessing(I, line_spacing=1/2):
     #Load image and covert it to grayscale
@@ -33,7 +30,7 @@ def Preprocessing(I, line_spacing=1/2):
     thershold = filters.threshold_otsu(I) 
     Ibw = np.zeros((h,w), dtype=np.uint8)
     Ibw[I >= thershold] = 1
-
+    #I[I >= thershold] = 255
 
     #fix scanning problems
     Ibw[:,:50] = 1
@@ -56,8 +53,8 @@ def Preprocessing(I, line_spacing=1/2):
     h_total = 0
     n = 0
 
-    #Convert Binary image to negative boolean so we can do logical operations on it
-    negative_Ibw = (Ibw!=1)
+    #Convert Binary image to negative image so we can do logical operations on it
+    negative_I = 255 - I
 
     #Estimate width and height of I_Compact
     sum_a = 0 #sum of widths of all connected components
@@ -69,7 +66,7 @@ def Preprocessing(I, line_spacing=1/2):
   
     estimate_length = int(np.sqrt(sum_a))
     
-    I_Compact = np.zeros((3*estimate_length,3*estimate_length), dtype=np.bool) 
+    I_Compact = np.zeros((3*estimate_length,3*estimate_length), dtype=np.uint8) 
 
     for cnt in contours[::-1]:
         (x, y, ww, hh) = cv2.boundingRect(cnt)
@@ -77,14 +74,14 @@ def Preprocessing(I, line_spacing=1/2):
         #Condition to discard small dots, ticks, etc.
         if ww * hh > 100:
             #Find the center of mass
-            mu = cv2.moments(Ibw[y:y + hh, x:x + ww])
+            mu = cv2.moments(I[y:y + hh, x:x + ww])
             center = ((mu['m01'] / mu['m00']), (mu['m10'] / mu['m00']))
 
 
             begin_y = start_y - int(np.ceil(center[0]))
 
             #Elementwise OR on negative image
-            I_Compact[begin_y:begin_y + hh, start_x:start_x + ww] = np.logical_or(negative_Ibw[y:y + hh, x:x + ww], I_Compact[begin_y:begin_y + hh, start_x:start_x + ww])
+            I_Compact[begin_y:begin_y + hh, start_x:start_x + ww] = np.maximum(negative_I[y:y + hh, x:x + ww], I_Compact[begin_y:begin_y + hh, start_x:start_x + ww])
             
             start_x = start_x + ww
             h_total = h_total + hh
@@ -106,11 +103,12 @@ def Preprocessing(I, line_spacing=1/2):
 
     ''' CONNECTED COMPOMENTS END '''
 
-    I_Compact = 1 - np.uint8(I_Compact)
+    I_Compact = 255 - np.uint8(I_Compact)
     return I_Compact
 
 
 
 #Modeule test 
 if __name__ == "__main__":
-    I_Compact = Preprocessing(io.imread("a05-121.png"))
+    I_Compact = Preprocessing(io.imread("a05-089.png"))
+    io.imsave("output.jpg",I_Compact)
