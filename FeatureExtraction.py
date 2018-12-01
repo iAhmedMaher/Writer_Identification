@@ -58,7 +58,7 @@ def get_CSLBCoP_vector(img_block):
     cslbp_map = get_CSLBP(img_block)
     angles = [0.0, np.pi/4, np.pi/2, 3*np.pi/4]
     res = greycomatrix(cslbp_map.astype(int), [1], angles, levels=16)  # ALERT
-    return np.array(res).reshape((-1, 1))
+    return np.array(res).reshape((1, -1))
 
 
 if __name__ == '__main__':
