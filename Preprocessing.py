@@ -58,7 +58,7 @@ def Preprocessing(I, line_spacing=1/2, block_size=(200, 250)):
     n = 0
 
     
-    I_Compact = 255 - np.zeros((h,w), dtype=np.uint8) 
+    I_Compact = 255 - np.zeros((2*h, 2*w), dtype=np.uint8) 
 
     for cnt in contours[::-1]:
         (x, y, ww, hh) = cv2.boundingRect(cnt)
@@ -83,7 +83,7 @@ def Preprocessing(I, line_spacing=1/2, block_size=(200, 250)):
             if start_x >= block_size[1] + margin_x + 20:
                 widths.append(start_x)
                 start_y = start_y + int(line_spacing * h_total / n)
-                start_x = 50
+                start_x = margin_x
                 h_total = 0
                 n = 0
                 if start_y >= block_size[0] + margin_y + 20:
@@ -92,7 +92,7 @@ def Preprocessing(I, line_spacing=1/2, block_size=(200, 250)):
                     start_y = margin_y 
                     I_Compact = I_Compact[margin_y:end_y, margin_x:end_x].copy()
                     texture_blocks.append(I_Compact)
-                    I_Compact = 255 - np.zeros((h,w), dtype=np.uint8) 
+                    I_Compact = 255 - np.zeros((2*h,2*w), dtype=np.uint8) 
     
     
 
