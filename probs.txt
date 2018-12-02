@@ -1,0 +1,123 @@
+Training form: 26_a02-090.png
+Training form: 26_a02-093.png
+Training form: 342_g06-037k.png
+Training form: 342_g06-018k.png
+Training form: 349_h06-000.png
+Training form: 349_g06-115.png
+# Training Blocks: 15  - # Test Blocks: 1
+Trained the classifier.
+Actual Classes: ['349']
+Prediction: ['26']
+The classification accuracy: 0.0
+---------------------------------------------------------------
+Training form: 129_c06-103.png
+Training form: 129_c06-014.png
+Training form: 130_c06-000.png
+Training form: 130_b06-032.png
+Training form: 285_f07-042a.png
+Training form: 288_f07-019a.png
+Testing form: 287_f07-016.png
+# Training Blocks: 28  - # Test Blocks: 5
+Trained the classifier.
+Actual Classes: ['287' '287' '287' '287' '287']
+Prediction: ['129' '129' '129' '129' '129']
+The classification accuracy: 0.0
+---------------------------------------------------------------
+131-134
+---------------------------------------------------------------
+Preprocessing: 
+Training form: 389_h07-063a.png
+---------------------------------------------------------------
+# One of the training set images had a single block => 2 after changing to 128x256
+Training form: 458_l01-007.png
+Training form: 458_l01-016.png
+Training form: 488_l04-106.png
+Training form: 488_l04-106.png
+Training form: 586_n04-171.png
+Training form: 586_n04-190.png
+Testing form: 586_n04-171.png
+# Training Blocks: 11  - # Test Blocks: 3
+Trained the classifier.
+Actual Classes: ['586' '586' '586']
+Prediction: ['586' '586' '586']
+The classification accuracy: 1.0
+---------------------------------------------------------------
+# 0.6666 for LBP+SVM & CS+KNN but 1 after changing block size to 128x256
+Extracting Features
+Training form: 205_d06-104.png
+Training form: 205_d06-025.png
+Training form: 546_m04-078.png
+Training form: 546_m04-093.png
+Training form: 273_g04-011.png
+Training form: 273_f04-007.png
+Testing form: 273_g04-007.png
+# Training Blocks: 25  - # Test Blocks: 3
+Trained the classifier.
+Actual Classes: ['273' '273' '273']
+Prediction: ['205' '273' '273']
+The classification accuracy: 0.6666666666666666
+--------------------------------------------------------------
+Extracting Features
+Training form: 81_a06-100.png
+Training form: 81_a06-100.png
+Training form: 173_d06-063.png
+Training form: 173_d06-020.png
+Training form: 393_j07-015.png
+Training form: 393_h07-087.png
+Testing form: 393_h07-087.png
+Traceback (most recent call last):
+  File "C:/Users/Lenovo/Desktop/Subjects/Pattern/Project/WI/Writer_Identification/main.py", line 107, in <module>
+    print("# Training Blocks:", len(X_Train)," - # Test Blocks:",len(X_Test))
+TypeError: object of type 'NoneType' has no len()
+
+--------------------------------------------------------------
+# Prob with SVM + LBP
+Extracting Features
+Training form: 194_d04-086.png
+Training form: 194_d04-089.png
+Training form: 587_n04-209.png
+Training form: 587_n04-218.png
+Training form: 336_g06-018e.png
+Training form: 336_g06-045e.png
+Testing form: 336_g06-011e.png
+# Training Blocks: 23  - # Test Blocks: 5
+Trained the classifier.
+Actual Classes: ['336' '336' '336' '336' '336']
+Prediction: ['587' '587' '587' '587' '587']
+The classification accuracy: 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
