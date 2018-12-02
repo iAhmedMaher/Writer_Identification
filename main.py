@@ -55,7 +55,7 @@ def processTrainingImages(dataPath, numWriters):
 	while(len(rndmWriters)<3):
 		rndmWriter = random.randint(0, len(availableWriters)-1)
 		#Chosen writer must have at least 2 forms
-		writerForms = [f for f in fileNames if f.startswith(str(availableWriters[rndmWriter]))]
+		writerForms = [f for f in fileNames if f.split("_")[0]==str(availableWriters[rndmWriter])]
 		if (len(writerForms) <= 1 and len(rndmWriters)<2) or (len(writerForms)<=2 and len(rndmWriters)==2):
 			availableWriters.pop(rndmWriter)
 			continue
@@ -65,7 +65,7 @@ def processTrainingImages(dataPath, numWriters):
 	X=None
 	Y=[]
 	for i in range(3):
-		writerForms=[f for f in fileNames if f.startswith(str(rndmWriters[i]))]
+		writerForms=[f for f in fileNames if f.split("_")[0]==str(rndmWriters[i])]
 		availableForms = list(range(len(writerForms)))
 
 		for j in range(2):
@@ -85,6 +85,7 @@ def processTrainingImages(dataPath, numWriters):
 		if i==2:
 			rndmForm = random.randint(0, len(availableForms)-1)
 			testWriterFileName = writerForms[availableForms[rndmForm]]
+			print("Testing form:",testWriterFileName)
 
 	return X,np.array(Y)
 
@@ -94,18 +95,18 @@ if __name__ == '__main__':
 	testDataPath = "Test"
 	rndmDataPath = "handwritten_dataset"
 
-	#X_Train,Y_Train = processImages(trainingDataPath)
-	#X_Test, Y_Test = processImages(testDataPath)
-
 	while True:
 		print("Extracting Features")
+
+		#X_Train,Y_Train = processImages(trainingDataPath)
+		#X_Test, Y_Test = processImages(testDataPath)
 
 		X_Train, Y_Train = processTrainingImages(rndmDataPath, 671)
 		X_Test, Y_Test = processTestImages(rndmDataPath)
 
 		print("# Training Blocks:", len(X_Train)," - # Test Blocks:",len(X_Test))
 
-		adaboost_clf(Y_Train, X_Train, numClassifiers=50, learnRate=1.5, clfNum=2)
+		adaboost_clf(Y_Train, X_Train, numClassifiers=50, learnRate=1.5, clfNum=3)
 
 		print("Trained the classifier.")
 

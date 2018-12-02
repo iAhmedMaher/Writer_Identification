@@ -5,7 +5,7 @@ import skimage.io as io
 from skimage.color import rgb2gray
 from scipy.signal import convolve2d
 
-def getFeatureVector(textureBlock, method=1):
+def getFeatureVector(textureBlock, method=0):
     """
     method: integer
     0: LBP
