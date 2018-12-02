@@ -15,7 +15,7 @@ import cv2
 #Inputs:
 #I: Raw Image
 #[line_spacing = 1/2]: spacing between each line multiplied by average height of the line
-#[block_size = (128, 256)]: Block size (height, width)
+#[block_size = (128, 256)]: Block size (height, width). Note: additional (non empty) margin of upto +20 is added
 #Outputs:
 #List of 2D binary Blocks
 
@@ -49,8 +49,11 @@ def Preprocessing(I, line_spacing=1/2, block_size=(200, 250)):
     #Find connected components using build-in OpenCV function
     contours = cv2.findContours((1-Ibw) * 255, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[1]
 
-    start_y = 100 
-    start_x = 50
+    margin_y = 200
+    margin_x = 50
+
+    start_y = margin_y 
+    start_x = margin_x
     h_total = 0
     n = 0
 
@@ -77,17 +80,17 @@ def Preprocessing(I, line_spacing=1/2, block_size=(200, 250)):
             n = n + 1
     
             #Start new line in the compact image
-            if start_x >= block_size[1]+20:
+            if start_x >= block_size[1] + margin_x + 20:
                 widths.append(start_x)
                 start_y = start_y + int(line_spacing * h_total / n)
                 start_x = 50
                 h_total = 0
                 n = 0
-                if start_y >= block_size[0] + 20:
+                if start_y >= block_size[0] + margin_y + 20:
                     end_x = np.min(widths)
                     end_y = start_y
-                    start_y = 100 
-                    I_Compact = I_Compact[100:end_y, 50:end_x].copy()
+                    start_y = margin_y 
+                    I_Compact = I_Compact[margin_y:end_y, margin_x:end_x].copy()
                     texture_blocks.append(I_Compact)
                     I_Compact = 255 - np.zeros((h,w), dtype=np.uint8) 
     
@@ -103,7 +106,7 @@ def Preprocessing(I, line_spacing=1/2, block_size=(200, 250)):
 
 #Modeule test 
 if __name__ == "__main__":
-    blocks = Preprocessing(io.imread("Test\\2_2.png"))
+    blocks = Preprocessing(io.imread("b04-096.png"))
     for block in blocks:
         io.imshow(block)
         io.show()
