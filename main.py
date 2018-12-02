@@ -68,8 +68,8 @@ if __name__ == '__main__':
 	trainingDataPath = "Training"
 	testDataPath = "Test"
 
-	X_Train,Y_Train = processImages(trainingDataPath)
-	X_Test, Y_Test = processImages(testDataPath)
+	X_Train,Y_Train = processTrainingImages(trainingDataPath, 671)
+	X_Test, Y_Test = processTestImages(testDataPath)
 
 	trainingFiles = [f for f in listdir(trainingDataPath)]
 	adaboost_clf(Y_Train, X_Train, numClassifiers=50, learnRate=1.5, clfNum=3)
