@@ -20,6 +20,7 @@ def get_feature_vectors():
     forms_counter = 0
     for form_filename in forms_filenames:
         forms_counter += 1
+        print("Current form in feature extraction:", form_filename)
         writer_id, form_id = Utilities.get_writer_form_id(form_filename)
         form_image = io.imread(os.path.join(FLAGS.TWO_FORM_DATASET_PATH, form_filename))
         texture_blocks = pre.Preprocessing(form_image)

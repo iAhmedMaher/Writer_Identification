@@ -94,7 +94,7 @@ if __name__ == '__main__':
 	rndmDataPath = "handwritten_dataset"
 
 	print("Getting Images")
-
+	
 	#X_Train,Y_Train = processImages(trainingDataPath)
 	#X_Test, Y_Test = processImages(testDataPath)
 
