@@ -71,6 +71,7 @@ def processTrainingImages(dataPath, numWriters):
 		for j in range(2):
 			rndmForm = random.randint(0,len(availableForms)-1)
 			form = writerForms[availableForms[rndmForm]]
+			print("Training form:",form)
 			training_img = io.imread(join(dataPath, form))
 			textureBlocks = Preprocessing(training_img)
 			for textureBlock in textureBlocks:
@@ -82,7 +83,7 @@ def processTrainingImages(dataPath, numWriters):
 			availableForms.pop()
 
 		if i==2:
-			rndmForm = random.randint(0, len(availableForms))
+			rndmForm = random.randint(0, len(availableForms)-1)
 			testWriterFileName = writerForms[availableForms[rndmForm]]
 
 	return X,np.array(Y)
@@ -93,20 +94,21 @@ if __name__ == '__main__':
 	testDataPath = "Test"
 	rndmDataPath = "handwritten_dataset"
 
-	print("Getting Images")
-	
 	#X_Train,Y_Train = processImages(trainingDataPath)
 	#X_Test, Y_Test = processImages(testDataPath)
 
-	X_Train, Y_Train = processTrainingImages(rndmDataPath, 671)
-	X_Test, Y_Test = processTestImages(rndmDataPath)
+	while True:
+		print("Extracting Features")
 
-	print("# X training:", len(X_Train))
+		X_Train, Y_Train = processTrainingImages(rndmDataPath, 671)
+		X_Test, Y_Test = processTestImages(rndmDataPath)
 
-	adaboost_clf(Y_Train, X_Train, numClassifiers=50, learnRate=1.5, clfNum=2)
+		print("# Training Blocks:", len(X_Train)," - # Test Blocks:",len(X_Test))
 
-	print("Boosted")
+		adaboost_clf(Y_Train, X_Train, numClassifiers=50, learnRate=1.5, clfNum=2)
 
-	predict_clf(Y_Test,X_Test)
+		print("Trained the classifier.")
+
+		predict_clf(Y_Test,X_Test)
 
 

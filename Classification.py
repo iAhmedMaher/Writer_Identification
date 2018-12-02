@@ -18,10 +18,9 @@ X_test: The input features for the test set.
 def predict_clf(Y_test, X_test):
 	global clf
 	prediction = clf.predict(X_test)
-	print(Y_test)
-	print(prediction)
+	print("Actual Classes:",Y_test)
+	print("Prediction:",prediction)
 	accuracy = sum(Y_test==prediction)/len(Y_test)
-	print("This paper belongs to class "+str(prediction))
 	print("The classification accuracy: "+str(accuracy))
 	if(accuracy<1):
 		exit()
