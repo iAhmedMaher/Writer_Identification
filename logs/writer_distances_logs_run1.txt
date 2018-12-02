@@ -1,0 +1,2106 @@
+D:\ProgramFiles\Anaconda3\python.exe D:/Projects/Pattern_Recognition/Writer_Identification/GetDistances.py
+Starting...
+Current form in feature extraction: 0_a01-000u.png
+D:\ProgramFiles\Anaconda3\lib\site-packages\skimage\feature\texture.py:109: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  if np.issubdtype(image.dtype, np.float):
+Current form in feature extraction: 0_a01-003u.png
+Current form in feature extraction: 0_a01-007u.png
+Current form in feature extraction: 0_a01-011u.png
+Current form in feature extraction: 0_a01-014u.png
+Current form in feature extraction: 0_a01-020u.png
+Current form in feature extraction: 0_a01-026u.png
+Current form in feature extraction: 0_a01-030u.png
+Current form in feature extraction: 0_a01-043u.png
+Current form in feature extraction: 0_a01-049u.png
+Current form in feature extraction: 0_a01-049x.png
+Current form in feature extraction: 0_a01-053u.png
+Current form in feature extraction: 0_a01-058u.png
+Current form in feature extraction: 0_a01-063u.png
+Current form in feature extraction: 0_a01-068u.png
+Current form in feature extraction: 0_a01-072u.png
+Current form in feature extraction: 0_a01-077u.png
+Current form in feature extraction: 0_a01-082u.png
+Current form in feature extraction: 0_a01-087u.png
+Current form in feature extraction: 0_a01-091u.png
+Current form in feature extraction: 0_a01-096u.png
+Current form in feature extraction: 0_a01-102u.png
+Current form in feature extraction: 0_a01-107u.png
+Current form in feature extraction: 0_a01-113u.png
+Current form in feature extraction: 0_a01-117u.png
+Current form in feature extraction: 0_a01-122u.png
+Current form in feature extraction: 0_a01-128u.png
+Current form in feature extraction: 0_a01-132u.png
+Current form in feature extraction: 0_a01-132x.png
+Current form in feature extraction: 0_a03-050.png
+Current form in feature extraction: 0_a03-071.png
+Current form in feature extraction: 0_a03-073.png
+Current form in feature extraction: 0_a03-080.png
+Current form in feature extraction: 0_a03-089.png
+Current form in feature extraction: 0_a05-000.png
+Current form in feature extraction: 0_a05-013.png
+Current form in feature extraction: 0_a05-017.png
+Current form in feature extraction: 0_a05-022.png
+Current form in feature extraction: 0_a05-025.png
+Current form in feature extraction: 0_a05-029.png
+Current form in feature extraction: 0_a05-039.png
+Current form in feature extraction: 0_a05-044.png
+Current form in feature extraction: 0_a05-048.png
+Current form in feature extraction: 0_a05-053.png
+Current form in feature extraction: 0_a05-058.png
+Current form in feature extraction: 0_a05-062.png
+Current form in feature extraction: 0_a05-069.png
+Current form in feature extraction: 0_a05-073.png
+Current form in feature extraction: 0_a05-080.png
+Current form in feature extraction: 0_a05-084.png
+Current form in feature extraction: 0_a05-089.png
+Current form in feature extraction: 0_a05-094.png
+Current form in feature extraction: 0_a05-099.png
+Current form in feature extraction: 0_a05-104.png
+Current form in feature extraction: 0_a05-108.png
+Current form in feature extraction: 0_a05-113.png
+Current form in feature extraction: 0_a05-116.png
+Current form in feature extraction: 0_a05-121.png
+Current form in feature extraction: 0_a05-125.png
+Current form in feature extraction: 102_b03-087.png
+Current form in feature extraction: 102_b03-092.png
+Current form in feature extraction: 107_b04-000.png
+Current form in feature extraction: 107_b04-004.png
+Current form in feature extraction: 107_b04-010.png
+Current form in feature extraction: 107_b04-020.png
+Current form in feature extraction: 108_b04-026.png
+Current form in feature extraction: 108_b04-034.png
+Current form in feature extraction: 108_b04-040.png
+Current form in feature extraction: 108_b04-047.png
+Current form in feature extraction: 109_b04-054.png
+Current form in feature extraction: 109_b04-060.png
+Current form in feature extraction: 109_b04-066.png
+Current form in feature extraction: 109_b04-075.png
+Current form in feature extraction: 10_a01-020x.png
+Current form in feature extraction: 10_a01-030x.png
+Current form in feature extraction: 110_b04-081.png
+Current form in feature extraction: 110_b04-089.png
+Current form in feature extraction: 110_b04-096.png
+Current form in feature extraction: 110_b04-103.png
+Current form in feature extraction: 111_b04-107.png
+Current form in feature extraction: 111_b04-116.png
+Current form in feature extraction: 111_b04-121.png
+Current form in feature extraction: 111_b04-128.png
+Current form in feature extraction: 112_b04-134.png
+Current form in feature extraction: 112_b04-140.png
+Current form in feature extraction: 112_b04-147.png
+Current form in feature extraction: 112_b04-154.png
+Current form in feature extraction: 113_b04-162.png
+Current form in feature extraction: 113_b04-169.png
+Current form in feature extraction: 113_b04-175.png
+Current form in feature extraction: 113_b04-181.png
+Current form in feature extraction: 114_b04-187.png
+Current form in feature extraction: 114_b04-195.png
+Current form in feature extraction: 114_b04-202.png
+Current form in feature extraction: 114_b04-208.png
+Current form in feature extraction: 117_b05-038.png
+Current form in feature extraction: 117_b05-042.png
+Current form in feature extraction: 117_b05-045.png
+Current form in feature extraction: 117_b05-050.png
+Current form in feature extraction: 118_b05-055.png
+Finished 100 forms and 269 blocks in 0:10:07.240052
+Current form in feature extraction: 118_b05-058.png
+Current form in feature extraction: 118_b05-062.png
+Current form in feature extraction: 118_b05-067.png
+Current form in feature extraction: 118_b05-071.png
+Current form in feature extraction: 118_g05-098.png
+Current form in feature extraction: 118_h05-012.png
+Current form in feature extraction: 119_b05-074.png
+Current form in feature extraction: 119_g05-094.png
+Current form in feature extraction: 11_a01-038x.png
+Current form in feature extraction: 11_a01-043x.png
+Current form in feature extraction: 121_b05-083.png
+Current form in feature extraction: 121_b05-098.png
+Current form in feature extraction: 123_b06-000.png
+Current form in feature extraction: 123_b06-023.png
+Current form in feature extraction: 123_b06-097.png
+Current form in feature extraction: 123_c06-039.png
+Current form in feature extraction: 123_c06-100.png
+Current form in feature extraction: 124_b06-004.png
+Current form in feature extraction: 124_b06-049.png
+Current form in feature extraction: 124_b06-075.png
+Current form in feature extraction: 124_c06-111.png
+Current form in feature extraction: 125_b06-008.png
+Current form in feature extraction: 125_b06-056.png
+Current form in feature extraction: 125_b06-093.png
+Current form in feature extraction: 125_c06-005.png
+Current form in feature extraction: 125_c06-020.png
+Current form in feature extraction: 126_b06-012.png
+Current form in feature extraction: 126_b06-036.png
+Current form in feature extraction: 126_b06-110.png
+Current form in feature extraction: 126_c06-052.png
+Current form in feature extraction: 126_c06-087.png
+Current form in feature extraction: 127_b06-015.png
+Current form in feature extraction: 127_b06-053.png
+Current form in feature extraction: 127_c06-106.png
+Current form in feature extraction: 128_b06-019.png
+Current form in feature extraction: 128_b06-071.png
+Current form in feature extraction: 128_c06-027.png
+Current form in feature extraction: 128_c06-076.png
+Current form in feature extraction: 128_c06-128.png
+Current form in feature extraction: 129_b06-027.png
+Current form in feature extraction: 129_c06-014.png
+Current form in feature extraction: 129_c06-103.png
+Current form in feature extraction: 129_c06-138.png
+Current form in feature extraction: 12_a01-043.png
+Current form in feature extraction: 12_a01-049.png
+Current form in feature extraction: 130_b06-032.png
+Current form in feature extraction: 130_b06-059.png
+Current form in feature extraction: 130_b06-079.png
+Current form in feature extraction: 130_c06-000.png
+Current form in feature extraction: 130_c06-031.png
+Current form in feature extraction: 131_b06-042.png
+Current form in feature extraction: 131_b06-068.png
+Current form in feature extraction: 131_c06-058.png
+Current form in feature extraction: 131_c06-095.png
+Current form in feature extraction: 132_b06-045.png
+Current form in feature extraction: 132_b06-082.png
+Current form in feature extraction: 132_c06-047.png
+Current form in feature extraction: 132_c06-091.png
+Current form in feature extraction: 133_b06-064.png
+Current form in feature extraction: 133_b06-100.png
+Current form in feature extraction: 133_c06-043.png
+Current form in feature extraction: 133_c06-080.png
+Current form in feature extraction: 133_c06-116.png
+Current form in feature extraction: 134_b06-087.png
+Current form in feature extraction: 134_b06-090.png
+Current form in feature extraction: 135_c01-009.png
+Current form in feature extraction: 135_c01-014.png
+Current form in feature extraction: 139_c02-007.png
+Current form in feature extraction: 139_c02-017.png
+Current form in feature extraction: 13_a01-053.png
+Current form in feature extraction: 13_a01-058.png
+Current form in feature extraction: 13_a01-063.png
+Current form in feature extraction: 140_c02-012.png
+Current form in feature extraction: 140_c02-022.png
+Current form in feature extraction: 14_a01-053x.png
+Current form in feature extraction: 14_a01-058x.png
+Current form in feature extraction: 150_c03-000a.png
+Current form in feature extraction: 150_c03-003a.png
+Current form in feature extraction: 150_c03-007a.png
+Current form in feature extraction: 150_c03-016a.png
+Current form in feature extraction: 150_c03-021a.png
+Current form in feature extraction: 150_c03-081a.png
+Current form in feature extraction: 150_c03-084a.png
+Current form in feature extraction: 150_c03-087a.png
+Current form in feature extraction: 150_c03-094a.png
+Current form in feature extraction: 150_c03-096a.png
+Current form in feature extraction: 151_c03-000b.png
+Current form in feature extraction: 151_c03-003b.png
+Current form in feature extraction: 151_c03-007b.png
+Current form in feature extraction: 151_c03-016b.png
+Current form in feature extraction: 151_c03-021b.png
+Current form in feature extraction: 151_c03-081b.png
+Current form in feature extraction: 151_c03-084b.png
+Current form in feature extraction: 151_c03-087b.png
+Current form in feature extraction: 151_c03-094b.png
+Current form in feature extraction: 151_c03-096b.png
+Current form in feature extraction: 152_c03-000c.png
+Current form in feature extraction: 152_c03-003c.png
+Current form in feature extraction: 152_c03-007c.png
+Current form in feature extraction: 152_c03-016c.png
+Finished 200 forms and 731 blocks in 0:26:25.797575
+Current form in feature extraction: 152_c03-021c.png
+Current form in feature extraction: 152_c03-081c.png
+Current form in feature extraction: 152_c03-084c.png
+Current form in feature extraction: 152_c03-087c.png
+Current form in feature extraction: 152_c03-094c.png
+Current form in feature extraction: 152_c03-096c.png
+Current form in feature extraction: 153_c03-000d.png
+Current form in feature extraction: 153_c03-003d.png
+Current form in feature extraction: 153_c03-007d.png
+Current form in feature extraction: 153_c03-016d.png
+Current form in feature extraction: 153_c03-021d.png
+Current form in feature extraction: 153_c03-081d.png
+Current form in feature extraction: 153_c03-084d.png
+Current form in feature extraction: 153_c03-087d.png
+Current form in feature extraction: 153_c03-094d.png
+Current form in feature extraction: 153_c03-096d.png
+Current form in feature extraction: 154_c03-000e.png
+Current form in feature extraction: 154_c03-003e.png
+Current form in feature extraction: 154_c03-007e.png
+Current form in feature extraction: 154_c03-016e.png
+Current form in feature extraction: 154_c03-021e.png
+Current form in feature extraction: 154_c03-081e.png
+Current form in feature extraction: 154_c03-084e.png
+Current form in feature extraction: 154_c03-087e.png
+Current form in feature extraction: 154_c03-094e.png
+Current form in feature extraction: 154_c03-096e.png
+Current form in feature extraction: 155_c03-000f.png
+Current form in feature extraction: 155_c03-003f.png
+Current form in feature extraction: 155_c03-007f.png
+Current form in feature extraction: 155_c03-021f.png
+Current form in feature extraction: 155_c03-081f.png
+Current form in feature extraction: 155_c03-084f.png
+Current form in feature extraction: 155_c03-087f.png
+Current form in feature extraction: 155_c03-094f.png
+Current form in feature extraction: 155_c03-096f.png
+Current form in feature extraction: 157_c04-000.png
+Current form in feature extraction: 157_c04-004.png
+Current form in feature extraction: 158_c04-008.png
+Current form in feature extraction: 158_c04-013.png
+Current form in feature extraction: 158_e04-000.png
+Current form in feature extraction: 159_c04-017.png
+Current form in feature extraction: 159_c04-035.png
+Current form in feature extraction: 160_c04-023.png
+Current form in feature extraction: 160_c04-028.png
+Current form in feature extraction: 161_c04-039.png
+Current form in feature extraction: 161_c04-044.png
+Current form in feature extraction: 162_c04-050.png
+Current form in feature extraction: 162_c04-056.png
+Current form in feature extraction: 163_c04-061.png
+Current form in feature extraction: 163_c04-066.png
+Current form in feature extraction: 164_c04-075.png
+Current form in feature extraction: 164_c04-122.png
+Current form in feature extraction: 165_c04-080.png
+Current form in feature extraction: 165_c04-128.png
+Current form in feature extraction: 166_c04-089.png
+Current form in feature extraction: 166_c04-098.png
+Current form in feature extraction: 168_c04-110.png
+Current form in feature extraction: 168_c04-116.png
+Current form in feature extraction: 169_c04-134.png
+Current form in feature extraction: 169_c04-139.png
+Current form in feature extraction: 16_a01-077.png
+Current form in feature extraction: 16_a01-091.png
+Current form in feature extraction: 16_a01-102.png
+Current form in feature extraction: 170_c04-144.png
+Current form in feature extraction: 170_c04-150.png
+Current form in feature extraction: 171_c04-156.png
+Current form in feature extraction: 171_c04-160.png
+Current form in feature extraction: 172_c04-165.png
+Current form in feature extraction: 172_c04-170.png
+Current form in feature extraction: 173_c06-011.png
+Current form in feature extraction: 173_d06-008.png
+Current form in feature extraction: 173_d06-020.png
+Current form in feature extraction: 173_d06-046.png
+Current form in feature extraction: 173_d06-063.png
+Current form in feature extraction: 174_c06-083.png
+Current form in feature extraction: 174_d06-015.png
+Current form in feature extraction: 174_d06-030.png
+Current form in feature extraction: 174_d06-050.png
+Current form in feature extraction: 174_d06-082.png
+Current form in feature extraction: 175_d01-016.png
+Current form in feature extraction: 175_d01-019.png
+Current form in feature extraction: 177_d01-049.png
+Current form in feature extraction: 177_d01-052.png
+Current form in feature extraction: 178_d01-056.png
+Current form in feature extraction: 178_d01-060.png
+Current form in feature extraction: 179_d01-080.png
+Current form in feature extraction: 179_d01-085.png
+Current form in feature extraction: 17_a01-087.png
+Current form in feature extraction: 17_b01-057.png
+Current form in feature extraction: 17_b01-062.png
+Current form in feature extraction: 180_d01-098.png
+Current form in feature extraction: 180_d01-104.png
+Current form in feature extraction: 181_d01-118.png
+Current form in feature extraction: 181_d01-123.png
+Current form in feature extraction: 181_e01-055.png
+Current form in feature extraction: 184_d04-005.png
+Current form in feature extraction: 184_d04-008.png
+Current form in feature extraction: 185_d04-012.png
+Current form in feature extraction: 185_d04-016.png
+Current form in feature extraction: 186_d04-021.png
+Finished 300 forms and 1119 blocks in 0:36:30.901557
+Current form in feature extraction: 186_d04-028.png
+Current form in feature extraction: 187_d04-032.png
+Current form in feature extraction: 187_d04-037.png
+Current form in feature extraction: 188_d04-047.png
+Current form in feature extraction: 188_d04-053.png
+Current form in feature extraction: 18_a01-107.png
+Current form in feature extraction: 18_a01-113.png
+Current form in feature extraction: 190_d04-058.png
+Current form in feature extraction: 190_d04-062.png
+Current form in feature extraction: 192_d04-071.png
+Current form in feature extraction: 192_d04-075.png
+Current form in feature extraction: 193_d04-081.png
+Current form in feature extraction: 193_f04-093.png
+Current form in feature extraction: 193_f04-096.png
+Current form in feature extraction: 193_f04-100.png
+Current form in feature extraction: 194_d04-086.png
+Current form in feature extraction: 194_d04-089.png
+Current form in feature extraction: 195_d04-096.png
+Current form in feature extraction: 195_d04-101.png
+Current form in feature extraction: 197_d04-117.png
+Current form in feature extraction: 197_d04-121.png
+Current form in feature extraction: 198_d04-125.png
+Current form in feature extraction: 198_d04-131.png
+Current form in feature extraction: 199_d05-008.png
+Current form in feature extraction: 199_d05-021.png
+Current form in feature extraction: 199_d05-025.png
+Current form in feature extraction: 199_d05-030.png
+Current form in feature extraction: 19_a01-117.png
+Current form in feature extraction: 19_a01-122.png
+Current form in feature extraction: 19_a01-128.png
+Current form in feature extraction: 1_a01-000x.png
+Current form in feature extraction: 1_a01-072x.png
+Current form in feature extraction: 202_d06-000.png
+Current form in feature extraction: 202_d06-091.png
+Current form in feature extraction: 202_e06-006.png
+Current form in feature extraction: 202_e06-037.png
+Current form in feature extraction: 202_e06-041.png
+Current form in feature extraction: 203_d06-003.png
+Current form in feature extraction: 203_d06-076.png
+Current form in feature extraction: 203_d06-111.png
+Current form in feature extraction: 203_e06-010.png
+Current form in feature extraction: 203_e06-046.png
+Current form in feature extraction: 204_d06-011.png
+Current form in feature extraction: 204_d06-107.png
+Current form in feature extraction: 204_e06-003.png
+Current form in feature extraction: 204_e06-015.png
+Current form in feature extraction: 204_e06-030.png
+Current form in feature extraction: 205_d06-025.png
+Current form in feature extraction: 205_d06-067.png
+Current form in feature extraction: 205_d06-104.png
+Current form in feature extraction: 205_e06-026.png
+Current form in feature extraction: 205_e06-049.png
+Current form in feature extraction: 206_d06-027.png
+Current form in feature extraction: 206_d06-056.png
+Current form in feature extraction: 206_d06-096.png
+Current form in feature extraction: 206_e06-000.png
+Current form in feature extraction: 206_e06-021.png
+Current form in feature extraction: 207_d06-037.png
+Current form in feature extraction: 207_d06-072.png
+Current form in feature extraction: 207_d06-100.png
+Current form in feature extraction: 207_e06-033.png
+Current form in feature extraction: 207_e06-070.png
+Current form in feature extraction: 208_d06-041.png
+Current form in feature extraction: 208_d06-060.png
+Current form in feature extraction: 208_d06-086.png
+Current form in feature extraction: 208_d06-113.png
+Current form in feature extraction: 208_e06-053.png
+Current form in feature extraction: 209_d07-082.png
+Current form in feature extraction: 209_d07-085.png
+Current form in feature extraction: 209_d07-089.png
+Current form in feature extraction: 209_d07-093.png
+Current form in feature extraction: 209_d07-096.png
+Current form in feature extraction: 209_d07-100.png
+Current form in feature extraction: 209_d07-102.png
+Current form in feature extraction: 210_e01-014.png
+Current form in feature extraction: 210_e01-018.png
+Current form in feature extraction: 211_e01-022.png
+Current form in feature extraction: 211_e01-025.png
+Current form in feature extraction: 212_e01-029.png
+Current form in feature extraction: 212_e01-032.png
+Current form in feature extraction: 212_e01-035.png
+Current form in feature extraction: 213_e01-050.png
+Current form in feature extraction: 213_e01-059.png
+Current form in feature extraction: 213_e01-062.png
+Current form in feature extraction: 214_e01-081.png
+Current form in feature extraction: 214_e01-086.png
+Current form in feature extraction: 215_e01-092.png
+Current form in feature extraction: 215_e01-102.png
+Current form in feature extraction: 216_e01-107.png
+Current form in feature extraction: 216_e01-113.png
+Current form in feature extraction: 217_e01-119.png
+Current form in feature extraction: 217_f01-139.png
+Current form in feature extraction: 217_g01-000.png
+Current form in feature extraction: 230_e04-004.png
+Current form in feature extraction: 230_e04-008.png
+Current form in feature extraction: 231_e04-011.png
+Current form in feature extraction: 231_e04-015.png
+Current form in feature extraction: 232_e04-019.png
+Current form in feature extraction: 232_e04-022.png
+Current form in feature extraction: 233_e04-026.png
+Finished 400 forms and 1518 blocks in 0:46:58.258441
+Current form in feature extraction: 233_e04-030.png
+Current form in feature extraction: 234_e04-034.png
+Current form in feature extraction: 234_e04-038.png
+Current form in feature extraction: 235_e04-043.png
+Current form in feature extraction: 235_e04-052.png
+Current form in feature extraction: 237_e04-062.png
+Current form in feature extraction: 237_e04-068.png
+Current form in feature extraction: 239_e04-083.png
+Current form in feature extraction: 239_g04-003.png
+Current form in feature extraction: 239_h04-000.png
+Current form in feature extraction: 239_k04-017.png
+Current form in feature extraction: 240_e04-086.png
+Current form in feature extraction: 240_k04-022.png
+Current form in feature extraction: 241_e04-091.png
+Current form in feature extraction: 241_e04-095.png
+Current form in feature extraction: 241_e04-099.png
+Current form in feature extraction: 241_e04-132.png
+Current form in feature extraction: 242_e04-103.png
+Current form in feature extraction: 242_e04-109.png
+Current form in feature extraction: 242_e04-114.png
+Current form in feature extraction: 243_e04-119.png
+Current form in feature extraction: 243_e04-124.png
+Current form in feature extraction: 243_e04-127.png
+Current form in feature extraction: 246_e07-012.png
+Current form in feature extraction: 246_e07-061.png
+Current form in feature extraction: 246_e07-066.png
+Current form in feature extraction: 246_e07-072.png
+Current form in feature extraction: 247_e07-076.png
+Current form in feature extraction: 247_e07-079.png
+Current form in feature extraction: 247_e07-083.png
+Current form in feature extraction: 247_e07-086.png
+Current form in feature extraction: 247_e07-090.png
+Current form in feature extraction: 248_e07-094.png
+Current form in feature extraction: 248_e07-098.png
+Current form in feature extraction: 248_e07-101.png
+Current form in feature extraction: 248_e07-105.png
+Current form in feature extraction: 248_e07-108.png
+Current form in feature extraction: 250_f01-053.png
+Current form in feature extraction: 250_f01-058.png
+Current form in feature extraction: 254_f01-081.png
+Current form in feature extraction: 254_f01-085.png
+Current form in feature extraction: 256_f01-143.png
+Current form in feature extraction: 256_f01-147.png
+Current form in feature extraction: 259_f02-017.png
+Current form in feature extraction: 259_f02-033.png
+Current form in feature extraction: 25_a02-017.png
+Current form in feature extraction: 25_a02-020.png
+Current form in feature extraction: 25_a02-024.png
+Current form in feature extraction: 25_a02-027.png
+Current form in feature extraction: 25_a02-032.png
+Current form in feature extraction: 26_a02-037.png
+Current form in feature extraction: 26_a02-042.png
+Current form in feature extraction: 26_a02-090.png
+Current form in feature extraction: 26_a02-093.png
+Current form in feature extraction: 26_a02-098.png
+Current form in feature extraction: 272_f04-004.png
+Current form in feature extraction: 272_f04-011.png
+Current form in feature extraction: 272_f04-016.png
+Current form in feature extraction: 273_f04-007.png
+Current form in feature extraction: 273_g04-007.png
+Current form in feature extraction: 273_g04-011.png
+Current form in feature extraction: 273_g04-014.png
+Current form in feature extraction: 273_g04-095.png
+Current form in feature extraction: 274_f04-020.png
+Current form in feature extraction: 274_g04-017.png
+Current form in feature extraction: 274_g04-026.png
+Current form in feature extraction: 274_g04-032.png
+Current form in feature extraction: 274_h04-025.png
+Current form in feature extraction: 275_f04-024.png
+Current form in feature extraction: 275_f04-028.png
+Current form in feature extraction: 276_f04-032.png
+Current form in feature extraction: 276_f04-035.png
+Current form in feature extraction: 277_f04-039.png
+Current form in feature extraction: 277_f04-043.png
+Current form in feature extraction: 278_f04-046.png
+Current form in feature extraction: 278_f04-049.png
+Current form in feature extraction: 279_f04-053.png
+Current form in feature extraction: 279_f04-057.png
+Current form in feature extraction: 280_f04-061.png
+Current form in feature extraction: 280_f04-064.png
+Current form in feature extraction: 281_f04-068.png
+Current form in feature extraction: 281_f04-071.png
+Current form in feature extraction: 282_f04-074.png
+Current form in feature extraction: 282_f04-079.png
+Current form in feature extraction: 283_f04-083.png
+Current form in feature extraction: 283_f04-087.png
+Current form in feature extraction: 285_f07-000.png
+Current form in feature extraction: 285_f07-039a.png
+Current form in feature extraction: 285_f07-042a.png
+Current form in feature extraction: 285_f07-046a.png
+Current form in feature extraction: 285_g07-079a.png
+Current form in feature extraction: 286_f07-000b.png
+Current form in feature extraction: 286_f07-002.png
+Current form in feature extraction: 286_f07-006.png
+Current form in feature extraction: 286_f07-009.png
+Current form in feature extraction: 287_f07-013.png
+Current form in feature extraction: 287_f07-016.png
+Current form in feature extraction: 287_f07-019b.png
+Current form in feature extraction: 287_f07-021b.png
+Current form in feature extraction: 287_f07-024b.png
+Finished 500 forms and 1857 blocks in 0:55:45.819079
+Current form in feature extraction: 288_f07-019a.png
+Current form in feature extraction: 288_f07-021a.png
+Current form in feature extraction: 288_f07-024a.png
+Current form in feature extraction: 288_f07-028a.png
+Current form in feature extraction: 288_f07-032a.png
+Current form in feature extraction: 289_f07-028b.png
+Current form in feature extraction: 289_f07-032b.png
+Current form in feature extraction: 289_f07-036.png
+Current form in feature extraction: 289_f07-039b.png
+Current form in feature extraction: 289_f07-042b.png
+Current form in feature extraction: 291_f07-069.png
+Current form in feature extraction: 291_f07-073.png
+Current form in feature extraction: 291_f07-081b.png
+Current form in feature extraction: 291_f07-084b.png
+Current form in feature extraction: 292_f07-076a.png
+Current form in feature extraction: 292_f07-081a.png
+Current form in feature extraction: 292_f07-084a.png
+Current form in feature extraction: 292_f07-088a.png
+Current form in feature extraction: 292_f07-092a.png
+Current form in feature extraction: 293_f07-088b.png
+Current form in feature extraction: 293_f07-092b.png
+Current form in feature extraction: 293_f07-096.png
+Current form in feature extraction: 293_f07-101b.png
+Current form in feature extraction: 293_g07-000b.png
+Current form in feature extraction: 294_f07-101a.png
+Current form in feature extraction: 294_g07-000a.png
+Current form in feature extraction: 294_g07-003a.png
+Current form in feature extraction: 294_g07-007a.png
+Current form in feature extraction: 295_g01-004.png
+Current form in feature extraction: 295_g01-008.png
+Current form in feature extraction: 296_g01-012.png
+Current form in feature extraction: 296_g01-016.png
+Current form in feature extraction: 296_g01-019.png
+Current form in feature extraction: 297_g01-022.png
+Current form in feature extraction: 297_g01-025.png
+Current form in feature extraction: 297_g01-027.png
+Current form in feature extraction: 298_g01-031.png
+Current form in feature extraction: 298_g01-034.png
+Current form in feature extraction: 298_g01-037.png
+Current form in feature extraction: 299_g01-039.png
+Current form in feature extraction: 299_g01-043.png
+Current form in feature extraction: 299_g01-045.png
+Current form in feature extraction: 300_g01-067.png
+Current form in feature extraction: 300_g01-070.png
+Current form in feature extraction: 300_g01-074.png
+Current form in feature extraction: 301_g01-083.png
+Current form in feature extraction: 301_h01-004.png
+Current form in feature extraction: 315_g03-049.png
+Current form in feature extraction: 315_n02-104.png
+Current form in feature extraction: 315_n02-109.png
+Current form in feature extraction: 315_n02-114.png
+Current form in feature extraction: 315_n02-120.png
+Current form in feature extraction: 315_n02-127.png
+Current form in feature extraction: 315_r03-053.png
+Current form in feature extraction: 320_g04-036.png
+Current form in feature extraction: 320_g04-039.png
+Current form in feature extraction: 321_g04-043.png
+Current form in feature extraction: 321_g04-048.png
+Current form in feature extraction: 324_g04-060.png
+Current form in feature extraction: 324_g04-063.png
+Current form in feature extraction: 325_g04-068.png
+Current form in feature extraction: 325_g04-072.png
+Current form in feature extraction: 328_g04-088.png
+Current form in feature extraction: 328_g04-092.png
+Current form in feature extraction: 329_g04-098.png
+Current form in feature extraction: 329_g04-101.png
+Current form in feature extraction: 330_g04-104.png
+Current form in feature extraction: 330_g04-108.png
+Current form in feature extraction: 330_h04-007.png
+Current form in feature extraction: 330_h04-021.png
+Current form in feature extraction: 332_g06-011a.png
+Current form in feature extraction: 332_g06-018a.png
+Current form in feature extraction: 332_g06-026a.png
+Current form in feature extraction: 332_g06-031a.png
+Current form in feature extraction: 332_g06-042a.png
+Current form in feature extraction: 332_g06-045a.png
+Current form in feature extraction: 332_g06-047a.png
+Current form in feature extraction: 332_g06-050a.png
+Current form in feature extraction: 333_g06-011b.png
+Current form in feature extraction: 333_g06-018b.png
+Current form in feature extraction: 333_g06-026b.png
+Current form in feature extraction: 333_g06-031b.png
+Current form in feature extraction: 333_g06-037b.png
+Current form in feature extraction: 333_g06-042b.png
+Current form in feature extraction: 333_g06-045b.png
+Current form in feature extraction: 333_g06-047b.png
+Current form in feature extraction: 333_g06-050b.png
+Current form in feature extraction: 334_g06-011c.png
+Current form in feature extraction: 334_g06-018c.png
+Current form in feature extraction: 334_g06-026c.png
+Current form in feature extraction: 334_g06-031c.png
+Current form in feature extraction: 334_g06-037c.png
+Current form in feature extraction: 334_g06-042c.png
+Current form in feature extraction: 334_g06-045c.png
+Current form in feature extraction: 334_g06-047c.png
+Current form in feature extraction: 334_g06-050c.png
+Current form in feature extraction: 335_g06-018d.png
+Current form in feature extraction: 335_g06-026d.png
+Current form in feature extraction: 335_g06-031d.png
+Current form in feature extraction: 335_g06-037d.png
+Finished 600 forms and 2175 blocks in 1:04:01.124316
+Current form in feature extraction: 335_g06-042d.png
+Current form in feature extraction: 335_g06-045d.png
+Current form in feature extraction: 335_g06-047d.png
+Current form in feature extraction: 335_g06-050d.png
+Current form in feature extraction: 336_g06-011e.png
+Current form in feature extraction: 336_g06-018e.png
+Current form in feature extraction: 336_g06-026e.png
+Current form in feature extraction: 336_g06-031e.png
+Current form in feature extraction: 336_g06-037e.png
+Current form in feature extraction: 336_g06-042e.png
+Current form in feature extraction: 336_g06-045e.png
+Current form in feature extraction: 336_g06-047e.png
+Current form in feature extraction: 336_g06-050e.png
+Current form in feature extraction: 337_g06-011f.png
+Current form in feature extraction: 337_g06-018f.png
+Current form in feature extraction: 337_g06-026f.png
+Current form in feature extraction: 337_g06-031f.png
+Current form in feature extraction: 337_g06-037f.png
+Current form in feature extraction: 337_g06-042f.png
+Current form in feature extraction: 337_g06-045f.png
+Current form in feature extraction: 337_g06-047f.png
+Current form in feature extraction: 337_g06-050f.png
+Current form in feature extraction: 338_g06-011g.png
+Current form in feature extraction: 338_g06-018g.png
+Current form in feature extraction: 338_g06-026g.png
+Current form in feature extraction: 338_g06-031g.png
+Current form in feature extraction: 338_g06-037g.png
+Current form in feature extraction: 338_g06-042g.png
+Current form in feature extraction: 338_g06-045g.png
+Current form in feature extraction: 338_g06-047g.png
+Current form in feature extraction: 338_g06-050g.png
+Current form in feature extraction: 339_g06-011h.png
+Current form in feature extraction: 339_g06-018h.png
+Current form in feature extraction: 339_g06-026h.png
+Current form in feature extraction: 339_g06-031h.png
+Current form in feature extraction: 339_g06-037h.png
+Current form in feature extraction: 339_g06-042h.png
+Current form in feature extraction: 339_g06-045h.png
+Current form in feature extraction: 339_g06-047h.png
+Current form in feature extraction: 339_g06-050h.png
+Current form in feature extraction: 340_g06-011i.png
+Current form in feature extraction: 340_g06-018i.png
+Current form in feature extraction: 340_g06-026i.png
+Current form in feature extraction: 340_g06-031i.png
+Current form in feature extraction: 340_g06-037i.png
+Current form in feature extraction: 340_g06-042i.png
+Current form in feature extraction: 340_g06-045i.png
+Current form in feature extraction: 340_g06-047i.png
+Current form in feature extraction: 340_g06-050i.png
+Current form in feature extraction: 341_g06-011j.png
+Current form in feature extraction: 341_g06-018j.png
+Current form in feature extraction: 341_g06-026j.png
+Current form in feature extraction: 341_g06-031j.png
+Current form in feature extraction: 341_g06-037j.png
+Current form in feature extraction: 341_g06-042j.png
+Current form in feature extraction: 341_g06-045j.png
+Current form in feature extraction: 341_g06-047j.png
+Current form in feature extraction: 341_g06-050j.png
+Current form in feature extraction: 342_g06-011k.png
+Current form in feature extraction: 342_g06-018k.png
+Current form in feature extraction: 342_g06-026k.png
+Current form in feature extraction: 342_g06-031k.png
+Current form in feature extraction: 342_g06-037k.png
+Current form in feature extraction: 342_g06-042k.png
+Current form in feature extraction: 342_g06-045k.png
+Current form in feature extraction: 342_g06-047k.png
+Current form in feature extraction: 342_g06-050k.png
+Current form in feature extraction: 343_g06-011l.png
+Current form in feature extraction: 343_g06-018l.png
+Current form in feature extraction: 343_g06-026l.png
+Current form in feature extraction: 343_g06-031l.png
+Current form in feature extraction: 343_g06-037l.png
+Current form in feature extraction: 343_g06-042l.png
+Current form in feature extraction: 343_g06-045l.png
+Current form in feature extraction: 343_g06-047l.png
+Current form in feature extraction: 343_g06-050l.png
+Current form in feature extraction: 344_g06-011m.png
+Current form in feature extraction: 344_g06-018m.png
+Current form in feature extraction: 344_g06-026m.png
+Current form in feature extraction: 344_g06-031m.png
+Current form in feature extraction: 344_g06-037m.png
+Current form in feature extraction: 344_g06-042m.png
+Current form in feature extraction: 344_g06-045m.png
+Current form in feature extraction: 344_g06-047m.png
+Current form in feature extraction: 344_g06-050m.png
+Current form in feature extraction: 345_g06-011n.png
+Current form in feature extraction: 345_g06-018n.png
+Current form in feature extraction: 345_g06-026n.png
+Current form in feature extraction: 345_g06-031n.png
+Current form in feature extraction: 345_g06-037n.png
+Current form in feature extraction: 345_g06-042n.png
+Current form in feature extraction: 345_g06-045n.png
+Current form in feature extraction: 345_g06-047n.png
+Current form in feature extraction: 345_g06-050n.png
+Current form in feature extraction: 346_g06-011o.png
+Current form in feature extraction: 346_g06-018o.png
+Current form in feature extraction: 346_g06-026o.png
+Current form in feature extraction: 346_g06-031o.png
+Current form in feature extraction: 346_g06-037o.png
+Current form in feature extraction: 346_g06-042o.png
+Finished 700 forms and 2496 blocks in 1:12:32.126429
+Current form in feature extraction: 346_g06-045o.png
+Current form in feature extraction: 346_g06-047o.png
+Current form in feature extraction: 346_g06-050o.png
+Current form in feature extraction: 347_g06-011p.png
+Current form in feature extraction: 347_g06-018p.png
+Current form in feature extraction: 347_g06-026p.png
+Current form in feature extraction: 347_g06-031p.png
+Current form in feature extraction: 347_g06-037p.png
+Current form in feature extraction: 347_g06-042p.png
+Current form in feature extraction: 347_g06-045p.png
+Current form in feature extraction: 347_g06-047p.png
+Current form in feature extraction: 347_g06-050p.png
+Current form in feature extraction: 348_g06-011r.png
+Current form in feature extraction: 348_g06-018r.png
+Current form in feature extraction: 348_g06-026r.png
+Current form in feature extraction: 348_g06-031r.png
+Current form in feature extraction: 348_g06-037r.png
+Current form in feature extraction: 348_g06-042r.png
+Current form in feature extraction: 348_g06-045r.png
+Current form in feature extraction: 348_g06-047r.png
+Current form in feature extraction: 348_g06-050r.png
+Current form in feature extraction: 349_g06-089.png
+Current form in feature extraction: 349_g06-093.png
+Current form in feature extraction: 349_g06-096.png
+Current form in feature extraction: 349_g06-101.png
+Current form in feature extraction: 349_g06-105.png
+Current form in feature extraction: 349_g06-109.png
+Current form in feature extraction: 349_g06-115.png
+Current form in feature extraction: 349_h06-000.png
+Current form in feature extraction: 349_h06-003.png
+Current form in feature extraction: 350_g07-003b.png
+Current form in feature extraction: 350_g07-007b.png
+Current form in feature extraction: 350_g07-010b.png
+Current form in feature extraction: 350_g07-014b.png
+Current form in feature extraction: 351_g07-014.png
+Current form in feature extraction: 351_g07-018a.png
+Current form in feature extraction: 351_g07-022a.png
+Current form in feature extraction: 351_g07-026a.png
+Current form in feature extraction: 351_g07-028a.png
+Current form in feature extraction: 352_g07-022b.png
+Current form in feature extraction: 352_g07-026b.png
+Current form in feature extraction: 352_g07-028b.png
+Current form in feature extraction: 352_g07-030.png
+Current form in feature extraction: 352_g07-034.png
+Current form in feature extraction: 353_g07-038.png
+Current form in feature extraction: 353_g07-042.png
+Current form in feature extraction: 353_g07-044.png
+Current form in feature extraction: 353_g07-047.png
+Current form in feature extraction: 353_g07-050.png
+Current form in feature extraction: 354_g07-065.png
+Current form in feature extraction: 354_g07-069a.png
+Current form in feature extraction: 354_g07-071a.png
+Current form in feature extraction: 354_g07-074a.png
+Current form in feature extraction: 354_g07-077a.png
+Current form in feature extraction: 355_g07-084.png
+Current form in feature extraction: 355_h07-000.png
+Current form in feature extraction: 355_h07-003.png
+Current form in feature extraction: 355_h07-007.png
+Current form in feature extraction: 355_h07-011.png
+Current form in feature extraction: 356_h01-000.png
+Current form in feature extraction: 356_h01-007.png
+Current form in feature extraction: 357_h01-010.png
+Current form in feature extraction: 357_h01-014.png
+Current form in feature extraction: 357_h01-018.png
+Current form in feature extraction: 364_h02-012.png
+Current form in feature extraction: 364_m01-100.png
+Current form in feature extraction: 379_h04-052.png
+Current form in feature extraction: 379_h04-055.png
+Current form in feature extraction: 37_a02-102.png
+Current form in feature extraction: 37_a02-106.png
+Current form in feature extraction: 37_a02-111.png
+Current form in feature extraction: 37_a02-124.png
+Current form in feature extraction: 37_a03-047.png
+Current form in feature extraction: 380_h04-057.png
+Current form in feature extraction: 380_h04-061.png
+Current form in feature extraction: 382_h04-071.png
+Current form in feature extraction: 382_h04-074.png
+Current form in feature extraction: 383_h04-078.png
+Current form in feature extraction: 383_h04-082.png
+Current form in feature extraction: 384_h06-079.png
+Current form in feature extraction: 384_h06-082.png
+Current form in feature extraction: 384_h06-085.png
+Current form in feature extraction: 384_h06-089.png
+Current form in feature extraction: 384_h06-092.png
+Current form in feature extraction: 384_h06-096.png
+Current form in feature extraction: 384_j06-000.png
+Current form in feature extraction: 384_j06-005.png
+Current form in feature extraction: 384_j06-008.png
+Current form in feature extraction: 384_j06-014.png
+Current form in feature extraction: 385_h07-013.png
+Current form in feature extraction: 385_h07-017.png
+Current form in feature extraction: 385_h07-020.png
+Current form in feature extraction: 385_h07-023.png
+Current form in feature extraction: 385_h07-025a.png
+Current form in feature extraction: 386_h07-025.png
+Current form in feature extraction: 386_h07-028.png
+Current form in feature extraction: 386_h07-030.png
+Current form in feature extraction: 386_h07-033.png
+Current form in feature extraction: 386_h07-037.png
+Current form in feature extraction: 387_h07-028a.png
+Finished 800 forms and 2831 blocks in 1:21:12.693477
+Current form in feature extraction: 387_h07-030a.png
+Current form in feature extraction: 387_h07-033a.png
+Current form in feature extraction: 387_h07-037a.png
+Current form in feature extraction: 387_h07-040b.png
+Current form in feature extraction: 388_h07-040.png
+Current form in feature extraction: 388_h07-044a.png
+Current form in feature extraction: 388_h07-051b.png
+Current form in feature extraction: 389_h07-054a.png
+Current form in feature extraction: 389_h07-057a.png
+Current form in feature extraction: 389_h07-060a.png
+Current form in feature extraction: 389_h07-063a.png
+Current form in feature extraction: 389_h07-066a.png
+Current form in feature extraction: 390_h07-060b.png
+Current form in feature extraction: 390_h07-063b.png
+Current form in feature extraction: 390_h07-066b.png
+Current form in feature extraction: 390_h07-069a.png
+Current form in feature extraction: 390_h07-071a.png
+Current form in feature extraction: 391_h07-069.png
+Current form in feature extraction: 391_h07-071.png
+Current form in feature extraction: 391_h07-075.png
+Current form in feature extraction: 391_h07-078.png
+Current form in feature extraction: 391_h07-080.png
+Current form in feature extraction: 392_h07-075a.png
+Current form in feature extraction: 392_h07-078a.png
+Current form in feature extraction: 392_h07-080a.png
+Current form in feature extraction: 392_h07-084.png
+Current form in feature extraction: 393_h07-087.png
+Current form in feature extraction: 393_j07-000.png
+Current form in feature extraction: 393_j07-009.png
+Current form in feature extraction: 393_j07-012.png
+Current form in feature extraction: 393_j07-015.png
+Current form in feature extraction: 394_j01-042.png
+Current form in feature extraction: 394_j01-045.png
+Current form in feature extraction: 3_a01-003x.png
+Current form in feature extraction: 3_a01-007x.png
+Current form in feature extraction: 403_j04-019.png
+Current form in feature extraction: 403_j04-024.png
+Current form in feature extraction: 405_j04-035.png
+Current form in feature extraction: 405_j04-046.png
+Current form in feature extraction: 408_j04-061.png
+Current form in feature extraction: 408_j04-065.png
+Current form in feature extraction: 409_j04-070.png
+Current form in feature extraction: 409_j04-076.png
+Current form in feature extraction: 414_j04-111.png
+Current form in feature extraction: 414_j04-115.png
+Current form in feature extraction: 415_j06-018.png
+Current form in feature extraction: 415_j06-022.png
+Current form in feature extraction: 415_j06-026.png
+Current form in feature extraction: 415_j06-030.png
+Current form in feature extraction: 415_j06-034.png
+Current form in feature extraction: 415_j06-051.png
+Current form in feature extraction: 415_j06-056.png
+Current form in feature extraction: 420_k02-029.png
+Current form in feature extraction: 420_k03-180.png
+Current form in feature extraction: 439_k04-000.png
+Current form in feature extraction: 439_k04-039.png
+Current form in feature extraction: 442_k04-028.png
+Current form in feature extraction: 442_k04-033.png
+Current form in feature extraction: 443_k04-050.png
+Current form in feature extraction: 443_k04-054.png
+Current form in feature extraction: 444_k04-057.png
+Current form in feature extraction: 444_k04-061.png
+Current form in feature extraction: 445_k04-064.png
+Current form in feature extraction: 445_k04-068.png
+Current form in feature extraction: 446_k04-075.png
+Current form in feature extraction: 446_k04-079.png
+Current form in feature extraction: 447_k04-085.png
+Current form in feature extraction: 447_k04-093.png
+Current form in feature extraction: 448_k04-099.png
+Current form in feature extraction: 448_k04-103.png
+Current form in feature extraction: 449_k04-106.png
+Current form in feature extraction: 449_k04-119.png
+Current form in feature extraction: 450_k04-110.png
+Current form in feature extraction: 450_k04-115.png
+Current form in feature extraction: 451_k04-126.png
+Current form in feature extraction: 451_k04-136.png
+Current form in feature extraction: 452_k04-142.png
+Current form in feature extraction: 452_k04-149.png
+Current form in feature extraction: 453_k04-156.png
+Current form in feature extraction: 453_k04-163.png
+Current form in feature extraction: 454_k07-059a.png
+Current form in feature extraction: 454_k07-063a.png
+Current form in feature extraction: 454_k07-067a.png
+Current form in feature extraction: 454_k07-077.png
+Current form in feature extraction: 454_k07-085.png
+Current form in feature extraction: 455_k07-122.png
+Current form in feature extraction: 455_k07-125.png
+Current form in feature extraction: 455_k07-134.png
+Current form in feature extraction: 455_k07-141.png
+Current form in feature extraction: 455_k07-146.png
+Current form in feature extraction: 456_k07-152.png
+Current form in feature extraction: 456_k07-158.png
+Current form in feature extraction: 456_k07-166.png
+Current form in feature extraction: 456_k07-176.png
+Current form in feature extraction: 456_k07-185.png
+Current form in feature extraction: 458_l01-007.png
+Current form in feature extraction: 458_l01-016.png
+Current form in feature extraction: 458_l01-023.png
+Current form in feature extraction: 480_l04-005.png
+Current form in feature extraction: 480_l04-012.png
+Finished 900 forms and 3160 blocks in 1:29:46.057879
+Current form in feature extraction: 481_l04-020.png
+Current form in feature extraction: 481_l04-026.png
+Current form in feature extraction: 482_l04-034.png
+Current form in feature extraction: 482_l04-043.png
+Current form in feature extraction: 483_l04-052.png
+Current form in feature extraction: 483_l04-062.png
+Current form in feature extraction: 484_l04-066.png
+Current form in feature extraction: 484_l04-071.png
+Current form in feature extraction: 486_l04-087.png
+Current form in feature extraction: 486_l04-093.png
+Current form in feature extraction: 487_l04-098.png
+Current form in feature extraction: 487_l04-102.png
+Current form in feature extraction: 488_l04-106.png
+Current form in feature extraction: 488_l04-113.png
+Current form in feature extraction: 489_l04-118.png
+Current form in feature extraction: 489_l04-124.png
+Current form in feature extraction: 490_l04-130.png
+Current form in feature extraction: 490_l04-136.png
+Current form in feature extraction: 491_l04-141.png
+Current form in feature extraction: 491_l04-147.png
+Current form in feature extraction: 492_l04-153.png
+Current form in feature extraction: 492_l04-159.png
+Current form in feature extraction: 493_l04-163.png
+Current form in feature extraction: 493_l04-170.png
+Current form in feature extraction: 494_l04-174.png
+Current form in feature extraction: 494_l04-179.png
+Current form in feature extraction: 495_l07-052.png
+Current form in feature extraction: 495_l07-065.png
+Current form in feature extraction: 495_l07-074.png
+Current form in feature extraction: 496_l07-080.png
+Current form in feature extraction: 496_l07-085.png
+Current form in feature extraction: 496_l07-103.png
+Current form in feature extraction: 496_l07-111.png
+Current form in feature extraction: 497_l07-118.png
+Current form in feature extraction: 497_l07-131.png
+Current form in feature extraction: 497_l07-135.png
+Current form in feature extraction: 497_l07-138.png
+Current form in feature extraction: 498_l07-172.png
+Current form in feature extraction: 498_l07-176.png
+Current form in feature extraction: 498_l07-181.png
+Current form in feature extraction: 498_l07-187.png
+Current form in feature extraction: 498_l07-190.png
+Current form in feature extraction: 513_m01-104.png
+Current form in feature extraction: 513_m01-121.png
+Current form in feature extraction: 514_m01-110.png
+Current form in feature extraction: 514_m01-131.png
+Current form in feature extraction: 527_m02-075.png
+Current form in feature extraction: 527_m02-106.png
+Current form in feature extraction: 542_m03-110.png
+Current form in feature extraction: 542_m03-114.png
+Current form in feature extraction: 544_m04-000.png
+Current form in feature extraction: 544_m04-007.png
+Current form in feature extraction: 544_m04-012.png
+Current form in feature extraction: 544_m04-019.png
+Current form in feature extraction: 544_m04-024.png
+Current form in feature extraction: 545_m04-030.png
+Current form in feature extraction: 545_m04-038.png
+Current form in feature extraction: 545_m04-043.png
+Current form in feature extraction: 545_m04-061.png
+Current form in feature extraction: 546_m04-072.png
+Current form in feature extraction: 546_m04-078.png
+Current form in feature extraction: 546_m04-081.png
+Current form in feature extraction: 546_m04-093.png
+Current form in feature extraction: 546_m04-100.png
+Current form in feature extraction: 547_m04-107.png
+Current form in feature extraction: 547_m04-113.png
+Current form in feature extraction: 547_m04-123.png
+Current form in feature extraction: 547_m04-131.png
+Current form in feature extraction: 547_m04-138.png
+Current form in feature extraction: 548_m04-145.png
+Current form in feature extraction: 548_m04-152.png
+Current form in feature extraction: 548_m04-164.png
+Current form in feature extraction: 548_m04-180.png
+Current form in feature extraction: 548_m04-251.png
+Current form in feature extraction: 549_m04-190.png
+Current form in feature extraction: 549_m04-200.png
+Current form in feature extraction: 549_m04-209.png
+Current form in feature extraction: 549_m04-216.png
+Current form in feature extraction: 549_m04-222.png
+Current form in feature extraction: 550_m04-231.png
+Current form in feature extraction: 550_m04-238.png
+Current form in feature extraction: 550_m04-246.png
+Current form in feature extraction: 550_n04-000.png
+Current form in feature extraction: 550_n04-009.png
+Current form in feature extraction: 551_m06-019.png
+Current form in feature extraction: 551_n06-148.png
+Current form in feature extraction: 551_n06-156.png
+Current form in feature extraction: 551_n06-163.png
+Current form in feature extraction: 551_n06-169.png
+Current form in feature extraction: 551_n06-175.png
+Current form in feature extraction: 551_n06-182.png
+Current form in feature extraction: 551_n06-186.png
+Current form in feature extraction: 551_n06-194.png
+Current form in feature extraction: 551_n06-201.png
+Current form in feature extraction: 552_m06-031.png
+Current form in feature extraction: 552_m06-042.png
+Current form in feature extraction: 552_m06-048.png
+Current form in feature extraction: 552_m06-056.png
+Current form in feature extraction: 552_m06-067.png
+Current form in feature extraction: 552_m06-076.png
+Finished 1000 forms and 3446 blocks in 1:37:36.729735
+Current form in feature extraction: 552_m06-083.png
+Current form in feature extraction: 552_m06-091.png
+Current form in feature extraction: 552_m06-098.png
+Current form in feature extraction: 552_m06-106.png
+Current form in feature extraction: 553_n01-000.png
+Current form in feature extraction: 553_n01-009.png
+Current form in feature extraction: 555_n01-020.png
+Current form in feature extraction: 555_n01-031.png
+Current form in feature extraction: 555_n01-045.png
+Current form in feature extraction: 559_n02-000.png
+Current form in feature extraction: 559_n02-016.png
+Current form in feature extraction: 560_n02-004.png
+Current form in feature extraction: 560_n02-009.png
+Current form in feature extraction: 561_n02-028.png
+Current form in feature extraction: 561_n02-049.png
+Current form in feature extraction: 562_n02-033.png
+Current form in feature extraction: 562_n02-037.png
+Current form in feature extraction: 563_n02-040.png
+Current form in feature extraction: 563_n02-045.png
+Current form in feature extraction: 567_n02-098.png
+Current form in feature extraction: 567_p03-057.png
+Current form in feature extraction: 567_p03-087.png
+Current form in feature extraction: 567_p03-096.png
+Current form in feature extraction: 567_p03-103.png
+Current form in feature extraction: 567_p03-112.png
+Current form in feature extraction: 577_n03-097.png
+Current form in feature extraction: 577_n03-103.png
+Current form in feature extraction: 582_n04-015.png
+Current form in feature extraction: 582_n04-022.png
+Current form in feature extraction: 582_n04-031.png
+Current form in feature extraction: 582_n04-039.png
+Current form in feature extraction: 582_n04-044.png
+Current form in feature extraction: 583_n04-048.png
+Current form in feature extraction: 583_n04-052.png
+Current form in feature extraction: 583_n04-060.png
+Current form in feature extraction: 583_n04-068.png
+Current form in feature extraction: 583_n04-075.png
+Current form in feature extraction: 584_n04-084.png
+Current form in feature extraction: 584_n04-092.png
+Current form in feature extraction: 584_n04-100.png
+Current form in feature extraction: 584_n04-107.png
+Current form in feature extraction: 584_n04-114.png
+Current form in feature extraction: 585_n04-130.png
+Current form in feature extraction: 585_n04-139.png
+Current form in feature extraction: 585_n04-149.png
+Current form in feature extraction: 585_n04-156.png
+Current form in feature extraction: 585_n04-163.png
+Current form in feature extraction: 586_n04-171.png
+Current form in feature extraction: 586_n04-183.png
+Current form in feature extraction: 586_n04-190.png
+Current form in feature extraction: 586_n04-195.png
+Current form in feature extraction: 587_n04-202.png
+Current form in feature extraction: 587_n04-209.png
+Current form in feature extraction: 587_n04-213.png
+Current form in feature extraction: 587_n04-218.png
+Current form in feature extraction: 588_n06-074.png
+Current form in feature extraction: 588_n06-082.png
+Current form in feature extraction: 588_n06-092.png
+Current form in feature extraction: 588_n06-100.png
+Current form in feature extraction: 588_n06-111.png
+Current form in feature extraction: 588_n06-119.png
+Current form in feature extraction: 588_n06-123.png
+Current form in feature extraction: 588_n06-128.png
+Current form in feature extraction: 588_n06-133.png
+Current form in feature extraction: 588_n06-140.png
+Current form in feature extraction: 58_a04-000.png
+Current form in feature extraction: 58_a04-003.png
+Current form in feature extraction: 58_a04-006.png
+Current form in feature extraction: 58_a04-010.png
+Current form in feature extraction: 598_p02-069.png
+Current form in feature extraction: 598_p02-090.png
+Current form in feature extraction: 599_p02-076.png
+Current form in feature extraction: 599_p02-081.png
+Current form in feature extraction: 59_a04-015.png
+Current form in feature extraction: 59_a04-019.png
+Current form in feature extraction: 59_a04-023.png
+Current form in feature extraction: 59_a04-027.png
+Current form in feature extraction: 5_a01-011.png
+Current form in feature extraction: 5_a01-030.png
+Current form in feature extraction: 60_a04-031.png
+Current form in feature extraction: 60_a04-035.png
+Current form in feature extraction: 60_a04-039.png
+Current form in feature extraction: 60_a04-043.png
+Current form in feature extraction: 61_a04-047.png
+Current form in feature extraction: 61_a04-050.png
+Current form in feature extraction: 61_a04-054.png
+Current form in feature extraction: 61_a04-059.png
+Current form in feature extraction: 62_a04-066.png
+Current form in feature extraction: 62_a04-069.png
+Current form in feature extraction: 62_a04-072.png
+Current form in feature extraction: 634_p06-030.png
+Current form in feature extraction: 634_p06-042.png
+Current form in feature extraction: 634_p06-047.png
+Current form in feature extraction: 634_p06-052.png
+Current form in feature extraction: 634_p06-058.png
+Current form in feature extraction: 634_p06-069.png
+Current form in feature extraction: 634_p06-088.png
+Current form in feature extraction: 634_p06-096.png
+Current form in feature extraction: 634_p06-104.png
+Current form in feature extraction: 635_p06-242.png
+Finished 1100 forms and 3827 blocks in 1:47:35.872394
+Current form in feature extraction: 635_p06-248.png
+Current form in feature extraction: 635_r06-000.png
+Current form in feature extraction: 635_r06-003.png
+Current form in feature extraction: 635_r06-007.png
+Current form in feature extraction: 635_r06-011.png
+Current form in feature extraction: 635_r06-018.png
+Current form in feature extraction: 635_r06-022.png
+Current form in feature extraction: 635_r06-027.png
+Current form in feature extraction: 635_r06-143.png
+Current form in feature extraction: 63_a04-081.png
+Current form in feature extraction: 63_a04-085.png
+Current form in feature extraction: 63_a04-089.png
+Current form in feature extraction: 64_a04-092.png
+Current form in feature extraction: 64_a04-096.png
+Current form in feature extraction: 64_a04-099.png
+Current form in feature extraction: 64_a04-103.png
+Current form in feature extraction: 658_r03-002.png
+Current form in feature extraction: 658_r03-007.png
+Current form in feature extraction: 65_a05-004.png
+Current form in feature extraction: 65_a05-009.png
+Current form in feature extraction: 66_a06-000.png
+Current form in feature extraction: 66_a06-004.png
+Current form in feature extraction: 670_r06-035.png
+Current form in feature extraction: 670_r06-041.png
+Current form in feature extraction: 670_r06-044.png
+Current form in feature extraction: 670_r06-049.png
+Current form in feature extraction: 670_r06-053.png
+Current form in feature extraction: 670_r06-057.png
+Current form in feature extraction: 670_r06-062.png
+Current form in feature extraction: 670_r06-066.png
+Current form in feature extraction: 670_r06-070.png
+Current form in feature extraction: 670_r06-076.png
+Current form in feature extraction: 671_r06-090.png
+Current form in feature extraction: 671_r06-097.png
+Current form in feature extraction: 671_r06-103.png
+Current form in feature extraction: 671_r06-106.png
+Current form in feature extraction: 671_r06-111.png
+Current form in feature extraction: 671_r06-115.png
+Current form in feature extraction: 671_r06-121.png
+Current form in feature extraction: 671_r06-126.png
+Current form in feature extraction: 671_r06-130.png
+Current form in feature extraction: 671_r06-137.png
+Current form in feature extraction: 7_a01-014.png
+Current form in feature extraction: 7_a01-038.png
+Current form in feature extraction: 81_a06-100.png
+Current form in feature extraction: 81_n02-146.png
+Current form in feature extraction: 84_a06-119.png
+Current form in feature extraction: 84_a06-128.png
+Current form in feature extraction: 85_a06-124.png
+Current form in feature extraction: 85_a06-134.png
+Current form in feature extraction: 85_a06-141.png
+Current form in feature extraction: 85_a06-147.png
+Current form in feature extraction: 85_a06-157.png
+Current form in feature extraction: 85_e07-000.png
+Current form in feature extraction: 87_b01-000.png
+Current form in feature extraction: 87_b01-004.png
+Current form in feature extraction: 87_b01-009.png
+Current form in feature extraction: 88_b01-014.png
+Current form in feature extraction: 88_b01-018.png
+Current form in feature extraction: 88_b01-023.png
+Current form in feature extraction: 89_b01-027.png
+Current form in feature extraction: 89_b01-033.png
+Current form in feature extraction: 89_b01-038.png
+Current form in feature extraction: 8_a01-014x.png
+Current form in feature extraction: 8_a01-026x.png
+Current form in feature extraction: 90_b01-044.png
+Current form in feature extraction: 90_b01-049.png
+Current form in feature extraction: 90_b01-053.png
+Current form in feature extraction: 91_b01-073.png
+Current form in feature extraction: 91_b01-079.png
+Current form in feature extraction: 92_b01-084.png
+Current form in feature extraction: 92_b01-089.png
+Current form in feature extraction: 92_b01-094.png
+Current form in feature extraction: 93_b01-113.png
+Current form in feature extraction: 93_b01-118.png
+Current form in feature extraction: 93_b01-122.png
+Current form in feature extraction: 94_b01-127.png
+Current form in feature extraction: 94_b01-132.png
+Current form in feature extraction: 94_b01-136.png
+Current form in feature extraction: 95_b02-013.png
+Current form in feature extraction: 95_b02-035.png
+Current form in feature extraction: 9_a01-020.png
+Current form in feature extraction: 9_a01-026.png
+Finished all 1183 forms and 4130 blocks in 1:55:36.967217
+Calculating distances and writing file...
+Finished 100 pairs in 1:55:37.050983
+Finished 200 pairs in 1:55:37.052983
+Finished 300 pairs in 1:55:37.055978
+Finished 400 pairs in 1:55:37.058983
+Finished 500 pairs in 1:55:37.061983
+Finished 600 pairs in 1:55:37.064983
+Finished 700 pairs in 1:55:37.067984
+Finished 800 pairs in 1:55:37.070983
+Finished 900 pairs in 1:55:37.072983
+Finished 1000 pairs in 1:55:37.075983
+Finished 1100 pairs in 1:55:37.079000
+Finished 1200 pairs in 1:55:37.082001
+Finished 1300 pairs in 1:55:37.085002
+Finished 1400 pairs in 1:55:37.088000
+Finished 1500 pairs in 1:55:37.091001
+Finished 1600 pairs in 1:55:37.093001
+Finished 1700 pairs in 1:55:37.096000
+Finished 1800 pairs in 1:55:37.098978
+Finished 1900 pairs in 1:55:37.101977
+Finished 2000 pairs in 1:55:37.104977
+Finished 2100 pairs in 1:55:37.106977
+Finished 2200 pairs in 1:55:37.109977
+Finished 2300 pairs in 1:55:37.112977
+Finished 2400 pairs in 1:55:37.115977
+Finished 2500 pairs in 1:55:37.118977
+Finished 2600 pairs in 1:55:37.122002
+Finished 2700 pairs in 1:55:37.123980
+Finished 2800 pairs in 1:55:37.127978
+Finished 2900 pairs in 1:55:37.130998
+Finished 3000 pairs in 1:55:37.133984
+Finished 3100 pairs in 1:55:37.135983
+Finished 3200 pairs in 1:55:37.138983
+Finished 3300 pairs in 1:55:37.141977
+Finished 3400 pairs in 1:55:37.144977
+Finished 3500 pairs in 1:55:37.147977
+Finished 3600 pairs in 1:55:37.149977
+Finished 3700 pairs in 1:55:37.152977
+Finished 3800 pairs in 1:55:37.155977
+Finished 3900 pairs in 1:55:37.158997
+Finished 4000 pairs in 1:55:37.161998
+Finished 4100 pairs in 1:55:37.164997
+Finished 4200 pairs in 1:55:37.166997
+Finished 4300 pairs in 1:55:37.169998
+Finished 4400 pairs in 1:55:37.175982
+Finished 4500 pairs in 1:55:37.178997
+Finished 4600 pairs in 1:55:37.181998
+Finished 4700 pairs in 1:55:37.184998
+Finished 4800 pairs in 1:55:37.187997
+Finished 4900 pairs in 1:55:37.190997
+Finished 5000 pairs in 1:55:37.192997
+Finished 5100 pairs in 1:55:37.195998
+Finished 5200 pairs in 1:55:37.198999
+Finished 5300 pairs in 1:55:37.201998
+Finished 5400 pairs in 1:55:37.204997
+Finished 5500 pairs in 1:55:37.206997
+Finished 5600 pairs in 1:55:37.209977
+Finished 5700 pairs in 1:55:37.212977
+Finished 5800 pairs in 1:55:37.215977
+Finished 5900 pairs in 1:55:37.218977
+Finished 6000 pairs in 1:55:37.220977
+Finished 6100 pairs in 1:55:37.223977
+Finished 6200 pairs in 1:55:37.226977
+Finished 6300 pairs in 1:55:37.229977
+Finished 6400 pairs in 1:55:37.231977
+Finished 6500 pairs in 1:55:37.234977
+Finished 6600 pairs in 1:55:37.237977
+Finished 6700 pairs in 1:55:37.239977
+Finished 6800 pairs in 1:55:37.242977
+Finished 6900 pairs in 1:55:37.245977
+Finished 7000 pairs in 1:55:37.248977
+Finished 7100 pairs in 1:55:37.251977
+Finished 7200 pairs in 1:55:37.253977
+Finished 7300 pairs in 1:55:37.256977
+Finished 7400 pairs in 1:55:37.259977
+Finished 7500 pairs in 1:55:37.262977
+Finished 7600 pairs in 1:55:37.265977
+Finished 7700 pairs in 1:55:37.267977
+Finished 7800 pairs in 1:55:37.270977
+Finished 7900 pairs in 1:55:37.273980
+Finished 8000 pairs in 1:55:37.276979
+Finished 8100 pairs in 1:55:37.278978
+Finished 8200 pairs in 1:55:37.281976
+Finished 8300 pairs in 1:55:37.284976
+Finished 8400 pairs in 1:55:37.287977
+Finished 8500 pairs in 1:55:37.290977
+Finished 8600 pairs in 1:55:37.292977
+Finished 8700 pairs in 1:55:37.295977
+Finished 8800 pairs in 1:55:37.298976
+Finished 8900 pairs in 1:55:37.301977
+Finished 9000 pairs in 1:55:37.304978
+Finished 9100 pairs in 1:55:37.307977
+Finished 9200 pairs in 1:55:37.310977
+Finished 9300 pairs in 1:55:37.313979
+Finished 9400 pairs in 1:55:37.315979
+Finished 9500 pairs in 1:55:37.318979
+Finished 9600 pairs in 1:55:37.321979
+Finished 9700 pairs in 1:55:37.324984
+Finished 9800 pairs in 1:55:37.327983
+Finished 9900 pairs in 1:55:37.329983
+Finished 10000 pairs in 1:55:37.332983
+Finished 10100 pairs in 1:55:37.335983
+Finished 10200 pairs in 1:55:37.337983
+Finished 10300 pairs in 1:55:37.340983
+Finished 10400 pairs in 1:55:37.344000
+Finished 10500 pairs in 1:55:37.347002
+Finished 10600 pairs in 1:55:37.350003
+Finished 10700 pairs in 1:55:37.353002
+Finished 10800 pairs in 1:55:37.355979
+Finished 10900 pairs in 1:55:37.360058
+Finished 11000 pairs in 1:55:37.363000
+Finished 11100 pairs in 1:55:37.366001
+Finished 11200 pairs in 1:55:37.369988
+Finished 11300 pairs in 1:55:37.374977
+Finished 11400 pairs in 1:55:37.380993
+Finished 11500 pairs in 1:55:37.386982
+Finished 11600 pairs in 1:55:37.393000
+Finished 11700 pairs in 1:55:37.397000
+Finished 11800 pairs in 1:55:37.400009
+Finished 11900 pairs in 1:55:37.402991
+Finished 12000 pairs in 1:55:37.406000
+Finished 12100 pairs in 1:55:37.409001
+Finished 12200 pairs in 1:55:37.412993
+Finished 12300 pairs in 1:55:37.415982
+Finished 12400 pairs in 1:55:37.418983
+Finished 12500 pairs in 1:55:37.421983
+Finished 12600 pairs in 1:55:37.424989
+Finished 12700 pairs in 1:55:37.432980
+Finished 12800 pairs in 1:55:37.435980
+Finished 12900 pairs in 1:55:37.440983
+Finished 13000 pairs in 1:55:37.444997
+Finished 13100 pairs in 1:55:37.447983
+Finished 13200 pairs in 1:55:37.450992
+Finished 13300 pairs in 1:55:37.454997
+Finished 13400 pairs in 1:55:37.458000
+Finished 13500 pairs in 1:55:37.460997
+Finished 13600 pairs in 1:55:37.465985
+Finished 13700 pairs in 1:55:37.469000
+Finished 13800 pairs in 1:55:37.472001
+Finished 13900 pairs in 1:55:37.477017
+Finished 14000 pairs in 1:55:37.481000
+Finished 14100 pairs in 1:55:37.483000
+Finished 14200 pairs in 1:55:37.486006
+Finished 14300 pairs in 1:55:37.490997
+Finished 14400 pairs in 1:55:37.494033
+Finished 14500 pairs in 1:55:37.496984
+Finished 14600 pairs in 1:55:37.499983
+Finished 14700 pairs in 1:55:37.502983
+Finished 14800 pairs in 1:55:37.505983
+Finished 14900 pairs in 1:55:37.508983
+Finished 15000 pairs in 1:55:37.511983
+Finished 15100 pairs in 1:55:37.513983
+Finished 15200 pairs in 1:55:37.516978
+Finished 15300 pairs in 1:55:37.519977
+Finished 15400 pairs in 1:55:37.522977
+Finished 15500 pairs in 1:55:37.525977
+Finished 15600 pairs in 1:55:37.528977
+Finished 15700 pairs in 1:55:37.530977
+Finished 15800 pairs in 1:55:37.533977
+Finished 15900 pairs in 1:55:37.536977
+Finished 16000 pairs in 1:55:37.539977
+Finished 16100 pairs in 1:55:37.541977
+Finished 16200 pairs in 1:55:37.544977
+Finished 16300 pairs in 1:55:37.547977
+Finished 16400 pairs in 1:55:37.550977
+Finished 16500 pairs in 1:55:37.552978
+Finished 16600 pairs in 1:55:37.555977
+Finished 16700 pairs in 1:55:37.558977
+Finished 16800 pairs in 1:55:37.561977
+Finished 16900 pairs in 1:55:37.564977
+Finished 17000 pairs in 1:55:37.566977
+Finished 17100 pairs in 1:55:37.569977
+Finished 17200 pairs in 1:55:37.572977
+Finished 17300 pairs in 1:55:37.575977
+Finished 17400 pairs in 1:55:37.578977
+Finished 17500 pairs in 1:55:37.584012
+Finished 17600 pairs in 1:55:37.590007
+Finished 17700 pairs in 1:55:37.595981
+Finished 17800 pairs in 1:55:37.600978
+Finished 17900 pairs in 1:55:37.607983
+Finished 18000 pairs in 1:55:37.611008
+Finished 18100 pairs in 1:55:37.613980
+Finished 18200 pairs in 1:55:37.618981
+Finished 18300 pairs in 1:55:37.621998
+Finished 18400 pairs in 1:55:37.624997
+Finished 18500 pairs in 1:55:37.631989
+Finished 18600 pairs in 1:55:37.634977
+Finished 18700 pairs in 1:55:37.638992
+Finished 18800 pairs in 1:55:37.645997
+Finished 18900 pairs in 1:55:37.648998
+Finished 19000 pairs in 1:55:37.652991
+Finished 19100 pairs in 1:55:37.657984
+Finished 19200 pairs in 1:55:37.661980
+Finished 19300 pairs in 1:55:37.665983
+Finished 19400 pairs in 1:55:37.669981
+Finished 19500 pairs in 1:55:37.672978
+Finished 19600 pairs in 1:55:37.678981
+Finished 19700 pairs in 1:55:37.682977
+Finished 19800 pairs in 1:55:37.685977
+Finished 19900 pairs in 1:55:37.694001
+Finished 20000 pairs in 1:55:37.697981
+Finished 20100 pairs in 1:55:37.701979
+Finished 20200 pairs in 1:55:37.704977
+Finished 20300 pairs in 1:55:37.707977
+Finished 20400 pairs in 1:55:37.710977
+Finished 20500 pairs in 1:55:37.713977
+Finished 20600 pairs in 1:55:37.716977
+Finished 20700 pairs in 1:55:37.718977
+Finished 20800 pairs in 1:55:37.721977
+Finished 20900 pairs in 1:55:37.724977
+Finished 21000 pairs in 1:55:37.727977
+Finished 21100 pairs in 1:55:37.729977
+Finished 21200 pairs in 1:55:37.732977
+Finished 21300 pairs in 1:55:37.735977
+Finished 21400 pairs in 1:55:37.738977
+Finished 21500 pairs in 1:55:37.741977
+Finished 21600 pairs in 1:55:37.744977
+Finished 21700 pairs in 1:55:37.746977
+Finished 21800 pairs in 1:55:37.749980
+Finished 21900 pairs in 1:55:37.752979
+Finished 22000 pairs in 1:55:37.755980
+Finished 22100 pairs in 1:55:37.758980
+Finished 22200 pairs in 1:55:37.761979
+Finished 22300 pairs in 1:55:37.763977
+Finished 22400 pairs in 1:55:37.766977
+Finished 22500 pairs in 1:55:37.769977
+Finished 22600 pairs in 1:55:37.772977
+Finished 22700 pairs in 1:55:37.775977
+Finished 22800 pairs in 1:55:37.778977
+Finished 22900 pairs in 1:55:37.781979
+Finished 23000 pairs in 1:55:37.784989
+Finished 23100 pairs in 1:55:37.789978
+Finished 23200 pairs in 1:55:37.793991
+Finished 23300 pairs in 1:55:37.797979
+Finished 23400 pairs in 1:55:37.799999
+Finished 23500 pairs in 1:55:37.803980
+Finished 23600 pairs in 1:55:37.807995
+Finished 23700 pairs in 1:55:37.812001
+Finished 23800 pairs in 1:55:37.814984
+Finished 23900 pairs in 1:55:37.818016
+Finished 24000 pairs in 1:55:37.820993
+Finished 24100 pairs in 1:55:37.823983
+Finished 24200 pairs in 1:55:37.827983
+Finished 24300 pairs in 1:55:37.831012
+Finished 24400 pairs in 1:55:37.834979
+Finished 24500 pairs in 1:55:37.836977
+Finished 24600 pairs in 1:55:37.839977
+Finished 24700 pairs in 1:55:37.843999
+Finished 24800 pairs in 1:55:37.848002
+Finished 24900 pairs in 1:55:37.851002
+Finished 25000 pairs in 1:55:37.853979
+Finished 25100 pairs in 1:55:37.858979
+Finished 25200 pairs in 1:55:37.862006
+Finished 25300 pairs in 1:55:37.865988
+Finished 25400 pairs in 1:55:37.870981
+Finished 25500 pairs in 1:55:37.873977
+Finished 25600 pairs in 1:55:37.877986
+Finished 25700 pairs in 1:55:37.881991
+Finished 25800 pairs in 1:55:37.884983
+Finished 25900 pairs in 1:55:37.887983
+Finished 26000 pairs in 1:55:37.891022
+Finished 26100 pairs in 1:55:37.896000
+Finished 26200 pairs in 1:55:37.899000
+Finished 26300 pairs in 1:55:37.902002
+Finished 26400 pairs in 1:55:37.904000
+Finished 26500 pairs in 1:55:37.907000
+Finished 26600 pairs in 1:55:37.911050
+Finished 26700 pairs in 1:55:37.914002
+Finished 26800 pairs in 1:55:37.916984
+Finished 26900 pairs in 1:55:37.919983
+Finished 27000 pairs in 1:55:37.921983
+Finished 27100 pairs in 1:55:37.924983
+Finished 27200 pairs in 1:55:37.927984
+Finished 27300 pairs in 1:55:37.931000
+Finished 27400 pairs in 1:55:37.934001
+Finished 27500 pairs in 1:55:37.937002
+Finished 27600 pairs in 1:55:37.939977
+Finished 27700 pairs in 1:55:37.942977
+Finished 27800 pairs in 1:55:37.945000
+Finished 27900 pairs in 1:55:37.948001
+Finished 28000 pairs in 1:55:37.951000
+Finished 28100 pairs in 1:55:37.954000
+Finished 28200 pairs in 1:55:37.957000
+Finished 28300 pairs in 1:55:37.960002
+Finished 28400 pairs in 1:55:37.962984
+Finished 28500 pairs in 1:55:37.965987
+Finished 28600 pairs in 1:55:37.968979
+Finished 28700 pairs in 1:55:37.972000
+Finished 28800 pairs in 1:55:37.974000
+Finished 28900 pairs in 1:55:37.977000
+Finished 29000 pairs in 1:55:37.980000
+Finished 29100 pairs in 1:55:37.983001
+Finished 29200 pairs in 1:55:37.986001
+Finished 29300 pairs in 1:55:37.988985
+Finished 29400 pairs in 1:55:37.993003
+Finished 29500 pairs in 1:55:37.996988
+Finished 29600 pairs in 1:55:38.002984
+Finished 29700 pairs in 1:55:38.006001
+Finished 29800 pairs in 1:55:38.008980
+Finished 29900 pairs in 1:55:38.013983
+Finished 30000 pairs in 1:55:38.017001
+Finished 30100 pairs in 1:55:38.020000
+Finished 30200 pairs in 1:55:38.022980
+Finished 30300 pairs in 1:55:38.028984
+Finished 30400 pairs in 1:55:38.031983
+Finished 30500 pairs in 1:55:38.034988
+Finished 30600 pairs in 1:55:38.038983
+Finished 30700 pairs in 1:55:38.040983
+Finished 30800 pairs in 1:55:38.044985
+Finished 30900 pairs in 1:55:38.050003
+Finished 31000 pairs in 1:55:38.052977
+Finished 31100 pairs in 1:55:38.055977
+Finished 31200 pairs in 1:55:38.058981
+Finished 31300 pairs in 1:55:38.063985
+Finished 31400 pairs in 1:55:38.066983
+Finished 31500 pairs in 1:55:38.070982
+Finished 31600 pairs in 1:55:38.076001
+Finished 31700 pairs in 1:55:38.079000
+Finished 31800 pairs in 1:55:38.082991
+Finished 31900 pairs in 1:55:38.086000
+Finished 32000 pairs in 1:55:38.088983
+Finished 32100 pairs in 1:55:38.091983
+Finished 32200 pairs in 1:55:38.097981
+Finished 32300 pairs in 1:55:38.101000
+Finished 32400 pairs in 1:55:38.104000
+Finished 32500 pairs in 1:55:38.107000
+Finished 32600 pairs in 1:55:38.109000
+Finished 32700 pairs in 1:55:38.112983
+Finished 32800 pairs in 1:55:38.115983
+Finished 32900 pairs in 1:55:38.118983
+Finished 33000 pairs in 1:55:38.121983
+Finished 33100 pairs in 1:55:38.124984
+Finished 33200 pairs in 1:55:38.127981
+Finished 33300 pairs in 1:55:38.130980
+Finished 33400 pairs in 1:55:38.134000
+Finished 33500 pairs in 1:55:38.136000
+Finished 33600 pairs in 1:55:38.139000
+Finished 33700 pairs in 1:55:38.141983
+Finished 33800 pairs in 1:55:38.144983
+Finished 33900 pairs in 1:55:38.147983
+Finished 34000 pairs in 1:55:38.151001
+Finished 34100 pairs in 1:55:38.154001
+Finished 34200 pairs in 1:55:38.157001
+Finished 34300 pairs in 1:55:38.160000
+Finished 34400 pairs in 1:55:38.163001
+Finished 34500 pairs in 1:55:38.165001
+Finished 34600 pairs in 1:55:38.168000
+Finished 34700 pairs in 1:55:38.170977
+Finished 34800 pairs in 1:55:38.173977
+Finished 34900 pairs in 1:55:38.176977
+Finished 35000 pairs in 1:55:38.178977
+Finished 35100 pairs in 1:55:38.182001
+Finished 35200 pairs in 1:55:38.185000
+Finished 35300 pairs in 1:55:38.188000
+Finished 35400 pairs in 1:55:38.191000
+Finished 35500 pairs in 1:55:38.194998
+Finished 35600 pairs in 1:55:38.197981
+Finished 35700 pairs in 1:55:38.200981
+Finished 35800 pairs in 1:55:38.204987
+Finished 35900 pairs in 1:55:38.211980
+Finished 36000 pairs in 1:55:38.215991
+Finished 36100 pairs in 1:55:38.218989
+Finished 36200 pairs in 1:55:38.222978
+Finished 36300 pairs in 1:55:38.228987
+Finished 36400 pairs in 1:55:38.233978
+Finished 36500 pairs in 1:55:38.236977
+Finished 36600 pairs in 1:55:38.243979
+Finished 36700 pairs in 1:55:38.247977
+Finished 36800 pairs in 1:55:38.250999
+Finished 36900 pairs in 1:55:38.255982
+Finished 37000 pairs in 1:55:38.258980
+Finished 37100 pairs in 1:55:38.263017
+Finished 37200 pairs in 1:55:38.265998
+Finished 37300 pairs in 1:55:38.268997
+Finished 37400 pairs in 1:55:38.271997
+Finished 37500 pairs in 1:55:38.275987
+Finished 37600 pairs in 1:55:38.279999
+Finished 37700 pairs in 1:55:38.282997
+Finished 37800 pairs in 1:55:38.285997
+Finished 37900 pairs in 1:55:38.291032
+Finished 38000 pairs in 1:55:38.294983
+Finished 38100 pairs in 1:55:38.297977
+Finished 38200 pairs in 1:55:38.303006
+Finished 38300 pairs in 1:55:38.306000
+Finished 38400 pairs in 1:55:38.309005
+Finished 38500 pairs in 1:55:38.313001
+Finished 38600 pairs in 1:55:38.316001
+Finished 38700 pairs in 1:55:38.319001
+Finished 38800 pairs in 1:55:38.322000
+Finished 38900 pairs in 1:55:38.325001
+Finished 39000 pairs in 1:55:38.328001
+Finished 39100 pairs in 1:55:38.330000
+Finished 39200 pairs in 1:55:38.332977
+Finished 39300 pairs in 1:55:38.335977
+Finished 39400 pairs in 1:55:38.338977
+Finished 39500 pairs in 1:55:38.341977
+Finished 39600 pairs in 1:55:38.343977
+Finished 39700 pairs in 1:55:38.346977
+Finished 39800 pairs in 1:55:38.349977
+Finished 39900 pairs in 1:55:38.352977
+Finished 40000 pairs in 1:55:38.355983
+Finished 40100 pairs in 1:55:38.357983
+Finished 40200 pairs in 1:55:38.360983
+Finished 40300 pairs in 1:55:38.363983
+Finished 40400 pairs in 1:55:38.367001
+Finished 40500 pairs in 1:55:38.370001
+Finished 40600 pairs in 1:55:38.372000
+Finished 40700 pairs in 1:55:38.375978
+Finished 40800 pairs in 1:55:38.377977
+Finished 40900 pairs in 1:55:38.380977
+Finished 41000 pairs in 1:55:38.383977
+Finished 41100 pairs in 1:55:38.387002
+Finished 41200 pairs in 1:55:38.389001
+Finished 41300 pairs in 1:55:38.392000
+Finished 41400 pairs in 1:55:38.395000
+Finished 41500 pairs in 1:55:38.399022
+Finished 41600 pairs in 1:55:38.401984
+Finished 41700 pairs in 1:55:38.404984
+Finished 41800 pairs in 1:55:38.406983
+Finished 41900 pairs in 1:55:38.409983
+Finished 42000 pairs in 1:55:38.413987
+Finished 42100 pairs in 1:55:38.420999
+Finished 42200 pairs in 1:55:38.423978
+Finished 42300 pairs in 1:55:38.429983
+Finished 42400 pairs in 1:55:38.432986
+Finished 42500 pairs in 1:55:38.435997
+Finished 42600 pairs in 1:55:38.439000
+Finished 42700 pairs in 1:55:38.442001
+Finished 42800 pairs in 1:55:38.445001
+Finished 42900 pairs in 1:55:38.448000
+Finished 43000 pairs in 1:55:38.451000
+Finished 43100 pairs in 1:55:38.453001
+Finished 43200 pairs in 1:55:38.456001
+Finished 43300 pairs in 1:55:38.459000
+Finished 43400 pairs in 1:55:38.462000
+Finished 43500 pairs in 1:55:38.465000
+Finished 43600 pairs in 1:55:38.468000
+Finished 43700 pairs in 1:55:38.470003
+Finished 43800 pairs in 1:55:38.473000
+Finished 43900 pairs in 1:55:38.475983
+Finished 44000 pairs in 1:55:38.478982
+Finished 44100 pairs in 1:55:38.481983
+Finished 44200 pairs in 1:55:38.484983
+Finished 44300 pairs in 1:55:38.486983
+Finished 44400 pairs in 1:55:38.489983
+Finished 44500 pairs in 1:55:38.492983
+Finished 44600 pairs in 1:55:38.495983
+Finished 44700 pairs in 1:55:38.497983
+Finished 44800 pairs in 1:55:38.500983
+Finished 44900 pairs in 1:55:38.503983
+Finished 45000 pairs in 1:55:38.506983
+Finished 45100 pairs in 1:55:38.509983
+Finished 45200 pairs in 1:55:38.512983
+Finished 45300 pairs in 1:55:38.514983
+Finished 45400 pairs in 1:55:38.517983
+Finished 45500 pairs in 1:55:38.520983
+Finished 45600 pairs in 1:55:38.523983
+Finished 45700 pairs in 1:55:38.526983
+Finished 45800 pairs in 1:55:38.528983
+Finished 45900 pairs in 1:55:38.531983
+Finished 46000 pairs in 1:55:38.534983
+Finished 46100 pairs in 1:55:38.537983
+Finished 46200 pairs in 1:55:38.539983
+Finished 46300 pairs in 1:55:38.542983
+Finished 46400 pairs in 1:55:38.545983
+Finished 46500 pairs in 1:55:38.548983
+Finished 46600 pairs in 1:55:38.551983
+Finished 46700 pairs in 1:55:38.553983
+Finished 46800 pairs in 1:55:38.556983
+Finished 46900 pairs in 1:55:38.559983
+Finished 47000 pairs in 1:55:38.562983
+Finished 47100 pairs in 1:55:38.564983
+Finished 47200 pairs in 1:55:38.567983
+Finished 47300 pairs in 1:55:38.570982
+Finished 47400 pairs in 1:55:38.573977
+Finished 47500 pairs in 1:55:38.576977
+Finished 47600 pairs in 1:55:38.578977
+Finished 47700 pairs in 1:55:38.581977
+Finished 47800 pairs in 1:55:38.584977
+Finished 47900 pairs in 1:55:38.587977
+Finished 48000 pairs in 1:55:38.590977
+Finished 48100 pairs in 1:55:38.592977
+Finished 48200 pairs in 1:55:38.595977
+Finished 48300 pairs in 1:55:38.598984
+Finished 48400 pairs in 1:55:38.601985
+Finished 48500 pairs in 1:55:38.604980
+Finished 48600 pairs in 1:55:38.607980
+Finished 48700 pairs in 1:55:38.610980
+Finished 48800 pairs in 1:55:38.613980
+Finished 48900 pairs in 1:55:38.616980
+Finished 49000 pairs in 1:55:38.618980
+Finished 49100 pairs in 1:55:38.621980
+Finished 49200 pairs in 1:55:38.625001
+Finished 49300 pairs in 1:55:38.628001
+Finished 49400 pairs in 1:55:38.631000
+Finished 49500 pairs in 1:55:38.634000
+Finished 49600 pairs in 1:55:38.636001
+Finished 49700 pairs in 1:55:38.639001
+Finished 49800 pairs in 1:55:38.642000
+Finished 49900 pairs in 1:55:38.645000
+Finished 50000 pairs in 1:55:38.647001
+Finished 50100 pairs in 1:55:38.650000
+Finished 50200 pairs in 1:55:38.653000
+Finished 50300 pairs in 1:55:38.656000
+Finished 50400 pairs in 1:55:38.659000
+Finished 50500 pairs in 1:55:38.662002
+Finished 50600 pairs in 1:55:38.664001
+Finished 50700 pairs in 1:55:38.667001
+Finished 50800 pairs in 1:55:38.670001
+Finished 50900 pairs in 1:55:38.673001
+Finished 51000 pairs in 1:55:38.676000
+Finished 51100 pairs in 1:55:38.679001
+Finished 51200 pairs in 1:55:38.681001
+Finished 51300 pairs in 1:55:38.684001
+Finished 51400 pairs in 1:55:38.687001
+Finished 51500 pairs in 1:55:38.690001
+Finished 51600 pairs in 1:55:38.693000
+Finished 51700 pairs in 1:55:38.696001
+Finished 51800 pairs in 1:55:38.698000
+Finished 51900 pairs in 1:55:38.701000
+Finished 52000 pairs in 1:55:38.704000
+Finished 52100 pairs in 1:55:38.707000
+Finished 52200 pairs in 1:55:38.710000
+Finished 52300 pairs in 1:55:38.712000
+Finished 52400 pairs in 1:55:38.715000
+Finished 52500 pairs in 1:55:38.718001
+Finished 52600 pairs in 1:55:38.721000
+Finished 52700 pairs in 1:55:38.724000
+Finished 52800 pairs in 1:55:38.726001
+Finished 52900 pairs in 1:55:38.729000
+Finished 53000 pairs in 1:55:38.732002
+Finished 53100 pairs in 1:55:38.735001
+Finished 53200 pairs in 1:55:38.738002
+Finished 53300 pairs in 1:55:38.740000
+Finished 53400 pairs in 1:55:38.742983
+Finished 53500 pairs in 1:55:38.745983
+Finished 53600 pairs in 1:55:38.748983
+Finished 53700 pairs in 1:55:38.751982
+Finished 53800 pairs in 1:55:38.754983
+Finished 53900 pairs in 1:55:38.757983
+Finished 54000 pairs in 1:55:38.759983
+Finished 54100 pairs in 1:55:38.762983
+Finished 54200 pairs in 1:55:38.765983
+Finished 54300 pairs in 1:55:38.768983
+Finished 54400 pairs in 1:55:38.770983
+Finished 54500 pairs in 1:55:38.773983
+Finished 54600 pairs in 1:55:38.776983
+Finished 54700 pairs in 1:55:38.779983
+Finished 54800 pairs in 1:55:38.782983
+Finished 54900 pairs in 1:55:38.784983
+Finished 55000 pairs in 1:55:38.787983
+Finished 55100 pairs in 1:55:38.790983
+Finished 55200 pairs in 1:55:38.793983
+Finished 55300 pairs in 1:55:38.795983
+Finished 55400 pairs in 1:55:38.800001
+Finished 55500 pairs in 1:55:38.802000
+Finished 55600 pairs in 1:55:38.805001
+Finished 55700 pairs in 1:55:38.808000
+Finished 55800 pairs in 1:55:38.810982
+Finished 55900 pairs in 1:55:38.813983
+Finished 56000 pairs in 1:55:38.816983
+Finished 56100 pairs in 1:55:38.819983
+Finished 56200 pairs in 1:55:38.823002
+Finished 56300 pairs in 1:55:38.825000
+Finished 56400 pairs in 1:55:38.828001
+Finished 56500 pairs in 1:55:38.831000
+Finished 56600 pairs in 1:55:38.834000
+Finished 56700 pairs in 1:55:38.837001
+Finished 56800 pairs in 1:55:38.839984
+Finished 56900 pairs in 1:55:38.842983
+Finished 57000 pairs in 1:55:38.846001
+Finished 57100 pairs in 1:55:38.848001
+Finished 57200 pairs in 1:55:38.851001
+Finished 57300 pairs in 1:55:38.854000
+Finished 57400 pairs in 1:55:38.857000
+Finished 57500 pairs in 1:55:38.860001
+Finished 57600 pairs in 1:55:38.862000
+Finished 57700 pairs in 1:55:38.865001
+Finished 57800 pairs in 1:55:38.868999
+Finished 57900 pairs in 1:55:38.872980
+Finished 58000 pairs in 1:55:38.876986
+Finished 58100 pairs in 1:55:38.881988
+Finished 58200 pairs in 1:55:38.884981
+Finished 58300 pairs in 1:55:38.888986
+Finished 58400 pairs in 1:55:38.891988
+Finished 58500 pairs in 1:55:38.896984
+Finished 58600 pairs in 1:55:38.900985
+Finished 58700 pairs in 1:55:38.907988
+Finished 58800 pairs in 1:55:38.911986
+Finished 58900 pairs in 1:55:38.915982
+Finished 59000 pairs in 1:55:38.918986
+Finished 59100 pairs in 1:55:38.921983
+Finished 59200 pairs in 1:55:38.924983
+Finished 59300 pairs in 1:55:38.932987
+Finished 59400 pairs in 1:55:38.935987
+Finished 59500 pairs in 1:55:38.940996
+Finished 59600 pairs in 1:55:38.948001
+Finished 59700 pairs in 1:55:38.954987
+Finished 59800 pairs in 1:55:38.965008
+Finished 59900 pairs in 1:55:38.970981
+Finished 60000 pairs in 1:55:38.973978
+Finished 60100 pairs in 1:55:38.980997
+Finished 60200 pairs in 1:55:38.986001
+Finished 60300 pairs in 1:55:38.990024
+Finished 60400 pairs in 1:55:38.994991
+Finished 60500 pairs in 1:55:38.999979
+Finished 60600 pairs in 1:55:39.004980
+Finished 60700 pairs in 1:55:39.007988
+Finished 60800 pairs in 1:55:39.011986
+Finished 60900 pairs in 1:55:39.015979
+Finished 61000 pairs in 1:55:39.020979
+Finished 61100 pairs in 1:55:39.024984
+Finished 61200 pairs in 1:55:39.026981
+Finished 61300 pairs in 1:55:39.030984
+Finished 61400 pairs in 1:55:39.033982
+Finished 61500 pairs in 1:55:39.036982
+Finished 61600 pairs in 1:55:39.040980
+Finished 61700 pairs in 1:55:39.044982
+Finished 61800 pairs in 1:55:39.047981
+Finished 61900 pairs in 1:55:39.050987
+Finished 62000 pairs in 1:55:39.053984
+Finished 62100 pairs in 1:55:39.056979
+Finished 62200 pairs in 1:55:39.059978
+Finished 62300 pairs in 1:55:39.061977
+Finished 62400 pairs in 1:55:39.064977
+Finished 62500 pairs in 1:55:39.067981
+Finished 62600 pairs in 1:55:39.070980
+Finished 62700 pairs in 1:55:39.073983
+Finished 62800 pairs in 1:55:39.077984
+Finished 62900 pairs in 1:55:39.081980
+Finished 63000 pairs in 1:55:39.084981
+Finished 63100 pairs in 1:55:39.092985
+Finished 63200 pairs in 1:55:39.097986
+Finished 63300 pairs in 1:55:39.104987
+Finished 63400 pairs in 1:55:39.107980
+Finished 63500 pairs in 1:55:39.111994
+Finished 63600 pairs in 1:55:39.114989
+Finished 63700 pairs in 1:55:39.117981
+Finished 63800 pairs in 1:55:39.120980
+Finished 63900 pairs in 1:55:39.124988
+Finished 64000 pairs in 1:55:39.129985
+Finished 64100 pairs in 1:55:39.132977
+Finished 64200 pairs in 1:55:39.136015
+Finished 64300 pairs in 1:55:39.141986
+Finished 64400 pairs in 1:55:39.144983
+Finished 64500 pairs in 1:55:39.148988
+Finished 64600 pairs in 1:55:39.151979
+Finished 64700 pairs in 1:55:39.154977
+Finished 64800 pairs in 1:55:39.157977
+Finished 64900 pairs in 1:55:39.161979
+Finished 65000 pairs in 1:55:39.165977
+Finished 65100 pairs in 1:55:39.167977
+Finished 65200 pairs in 1:55:39.172001
+Finished 65300 pairs in 1:55:39.176993
+Finished 65400 pairs in 1:55:39.179978
+Finished 65500 pairs in 1:55:39.183989
+Finished 65600 pairs in 1:55:39.186982
+Finished 65700 pairs in 1:55:39.189981
+Finished 65800 pairs in 1:55:39.192981
+Finished 65900 pairs in 1:55:39.195977
+Finished 66000 pairs in 1:55:39.198978
+Finished 66100 pairs in 1:55:39.201978
+Finished 66200 pairs in 1:55:39.204978
+Finished 66300 pairs in 1:55:39.207998
+Finished 66400 pairs in 1:55:39.210998
+Finished 66500 pairs in 1:55:39.212997
+Finished 66600 pairs in 1:55:39.215997
+Finished 66700 pairs in 1:55:39.218997
+Finished 66800 pairs in 1:55:39.221997
+Finished 66900 pairs in 1:55:39.225000
+Finished 67000 pairs in 1:55:39.228001
+Finished 67100 pairs in 1:55:39.230000
+Finished 67200 pairs in 1:55:39.233001
+Finished 67300 pairs in 1:55:39.236000
+Finished 67400 pairs in 1:55:39.239000
+Finished 67500 pairs in 1:55:39.242000
+Finished 67600 pairs in 1:55:39.245001
+Finished 67700 pairs in 1:55:39.247000
+Finished 67800 pairs in 1:55:39.250000
+Finished 67900 pairs in 1:55:39.253000
+Finished 68000 pairs in 1:55:39.255984
+Finished 68100 pairs in 1:55:39.258983
+Finished 68200 pairs in 1:55:39.261983
+Finished 68300 pairs in 1:55:39.264983
+Finished 68400 pairs in 1:55:39.266983
+Finished 68500 pairs in 1:55:39.269983
+Finished 68600 pairs in 1:55:39.272977
+Finished 68700 pairs in 1:55:39.275977
+Finished 68800 pairs in 1:55:39.279986
+Finished 68900 pairs in 1:55:39.282982
+Finished 69000 pairs in 1:55:39.285990
+Finished 69100 pairs in 1:55:39.291989
+Finished 69200 pairs in 1:55:39.294998
+Finished 69300 pairs in 1:55:39.298987
+Finished 69400 pairs in 1:55:39.301988
+Finished 69500 pairs in 1:55:39.304977
+Finished 69600 pairs in 1:55:39.307977
+Finished 69700 pairs in 1:55:39.313008
+Finished 69800 pairs in 1:55:39.318002
+Finished 69900 pairs in 1:55:39.321001
+Finished 70000 pairs in 1:55:39.324000
+Finished 70100 pairs in 1:55:39.328979
+Finished 70200 pairs in 1:55:39.333000
+Finished 70300 pairs in 1:55:39.335000
+Finished 70400 pairs in 1:55:39.338986
+Finished 70500 pairs in 1:55:39.342984
+Finished 70600 pairs in 1:55:39.347001
+Finished 70700 pairs in 1:55:39.349979
+Finished 70800 pairs in 1:55:39.352983
+Finished 70900 pairs in 1:55:39.356000
+Finished 71000 pairs in 1:55:39.359000
+Finished 71100 pairs in 1:55:39.363985
+Finished 71200 pairs in 1:55:39.368001
+Finished 71300 pairs in 1:55:39.371000
+Finished 71400 pairs in 1:55:39.374001
+Finished 71500 pairs in 1:55:39.378995
+Finished 71600 pairs in 1:55:39.382001
+Finished 71700 pairs in 1:55:39.385000
+Finished 71800 pairs in 1:55:39.387983
+Finished 71900 pairs in 1:55:39.389983
+Finished 72000 pairs in 1:55:39.394987
+Finished 72100 pairs in 1:55:39.399977
+Finished 72200 pairs in 1:55:39.402984
+Finished 72300 pairs in 1:55:39.405983
+Finished 72400 pairs in 1:55:39.409000
+Finished 72500 pairs in 1:55:39.412000
+Finished 72600 pairs in 1:55:39.414001
+Finished 72700 pairs in 1:55:39.416983
+Finished 72800 pairs in 1:55:39.419983
+Finished 72900 pairs in 1:55:39.422982
+Finished 73000 pairs in 1:55:39.425983
+Finished 73100 pairs in 1:55:39.427983
+Finished 73200 pairs in 1:55:39.430983
+Finished 73300 pairs in 1:55:39.433983
+Finished 73400 pairs in 1:55:39.436983
+Finished 73500 pairs in 1:55:39.439977
+Finished 73600 pairs in 1:55:39.441977
+Finished 73700 pairs in 1:55:39.444977
+Finished 73800 pairs in 1:55:39.447977
+Finished 73900 pairs in 1:55:39.451001
+Finished 74000 pairs in 1:55:39.454000
+Finished 74100 pairs in 1:55:39.457000
+Finished 74200 pairs in 1:55:39.460000
+Finished 74300 pairs in 1:55:39.462001
+Finished 74400 pairs in 1:55:39.465001
+Finished 74500 pairs in 1:55:39.468002
+Finished 74600 pairs in 1:55:39.471002
+Finished 74700 pairs in 1:55:39.474001
+Finished 74800 pairs in 1:55:39.476000
+Finished 74900 pairs in 1:55:39.479978
+Finished 75000 pairs in 1:55:39.481977
+Finished 75100 pairs in 1:55:39.484977
+Finished 75200 pairs in 1:55:39.488994
+Finished 75300 pairs in 1:55:39.492981
+Finished 75400 pairs in 1:55:39.496985
+Finished 75500 pairs in 1:55:39.499983
+Finished 75600 pairs in 1:55:39.504987
+Finished 75700 pairs in 1:55:39.508994
+Finished 75800 pairs in 1:55:39.513981
+Finished 75900 pairs in 1:55:39.517986
+Finished 76000 pairs in 1:55:39.522984
+Finished 76100 pairs in 1:55:39.528978
+Finished 76200 pairs in 1:55:39.533999
+Finished 76300 pairs in 1:55:39.537982
+Finished 76400 pairs in 1:55:39.540981
+Finished 76500 pairs in 1:55:39.545998
+Finished 76600 pairs in 1:55:39.552999
+Finished 76700 pairs in 1:55:39.555980
+Finished 76800 pairs in 1:55:39.562982
+Finished 76900 pairs in 1:55:39.565997
+Finished 77000 pairs in 1:55:39.569992
+Finished 77100 pairs in 1:55:39.573980
+Finished 77200 pairs in 1:55:39.577997
+Finished 77300 pairs in 1:55:39.580977
+Finished 77400 pairs in 1:55:39.583987
+Finished 77500 pairs in 1:55:39.586998
+Finished 77600 pairs in 1:55:39.589997
+Finished 77700 pairs in 1:55:39.594008
+Finished 77800 pairs in 1:55:39.597980
+Finished 77900 pairs in 1:55:39.601979
+Finished 78000 pairs in 1:55:39.604977
+Finished 78100 pairs in 1:55:39.607977
+Finished 78200 pairs in 1:55:39.611994
+Finished 78300 pairs in 1:55:39.613998
+Finished 78400 pairs in 1:55:39.616997
+Finished 78500 pairs in 1:55:39.619997
+Finished 78600 pairs in 1:55:39.622997
+Finished 78700 pairs in 1:55:39.625998
+Finished 78800 pairs in 1:55:39.628998
+Finished 78900 pairs in 1:55:39.631983
+Finished 79000 pairs in 1:55:39.637987
+Finished 79100 pairs in 1:55:39.641997
+Finished 79200 pairs in 1:55:39.644998
+Finished 79300 pairs in 1:55:39.647998
+Finished 79400 pairs in 1:55:39.649997
+Finished 79500 pairs in 1:55:39.652998
+Finished 79600 pairs in 1:55:39.655997
+Finished 79700 pairs in 1:55:39.658997
+Finished 79800 pairs in 1:55:39.661980
+Finished 79900 pairs in 1:55:39.663998
+Finished 80000 pairs in 1:55:39.666997
+Finished 80100 pairs in 1:55:39.669977
+Finished 80200 pairs in 1:55:39.672977
+Finished 80300 pairs in 1:55:39.675977
+Finished 80400 pairs in 1:55:39.678978
+Finished 80500 pairs in 1:55:39.680977
+Finished 80600 pairs in 1:55:39.683977
+Finished 80700 pairs in 1:55:39.686977
+Finished 80800 pairs in 1:55:39.690984
+Finished 80900 pairs in 1:55:39.693983
+Finished 81000 pairs in 1:55:39.696985
+Finished 81100 pairs in 1:55:39.701982
+Finished 81200 pairs in 1:55:39.704978
+Finished 81300 pairs in 1:55:39.708983
+Finished 81400 pairs in 1:55:39.713992
+Finished 81500 pairs in 1:55:39.716998
+Finished 81600 pairs in 1:55:39.719999
+Finished 81700 pairs in 1:55:39.723979
+Finished 81800 pairs in 1:55:39.728978
+Finished 81900 pairs in 1:55:39.731998
+Finished 82000 pairs in 1:55:39.738043
+Finished 82100 pairs in 1:55:39.741998
+Finished 82200 pairs in 1:55:39.744981
+Finished 82300 pairs in 1:55:39.750979
+Finished 82400 pairs in 1:55:39.753998
+Finished 82500 pairs in 1:55:39.756982
+Finished 82600 pairs in 1:55:39.761005
+Finished 82700 pairs in 1:55:39.764998
+Finished 82800 pairs in 1:55:39.767977
+Finished 82900 pairs in 1:55:39.770982
+Finished 83000 pairs in 1:55:39.775993
+Finished 83100 pairs in 1:55:39.778998
+Finished 83200 pairs in 1:55:39.783001
+Finished 83300 pairs in 1:55:39.787977
+Finished 83400 pairs in 1:55:39.790981
+Finished 83500 pairs in 1:55:39.793983
+Finished 83600 pairs in 1:55:39.800000
+Finished 83700 pairs in 1:55:39.802982
+Finished 83800 pairs in 1:55:39.806982
+Finished 83900 pairs in 1:55:39.809981
+Finished 84000 pairs in 1:55:39.813977
+Finished 84100 pairs in 1:55:39.816977
+Finished 84200 pairs in 1:55:39.818977
+Finished 84300 pairs in 1:55:39.821977
+Finished 84400 pairs in 1:55:39.824977
+Finished 84500 pairs in 1:55:39.827977
+Finished 84600 pairs in 1:55:39.830977
+Finished 84700 pairs in 1:55:39.833977
+Finished 84800 pairs in 1:55:39.835977
+Finished 84900 pairs in 1:55:39.838977
+Finished 85000 pairs in 1:55:39.841977
+Finished 85100 pairs in 1:55:39.843980
+Finished 85200 pairs in 1:55:39.846978
+Finished 85300 pairs in 1:55:39.849977
+Finished 85400 pairs in 1:55:39.852977
+Finished 85500 pairs in 1:55:39.855976
+Finished 85600 pairs in 1:55:39.858976
+Finished 85700 pairs in 1:55:39.860978
+Finished 85800 pairs in 1:55:39.863980
+Finished 85900 pairs in 1:55:39.866980
+Finished 86000 pairs in 1:55:39.869979
+Finished 86100 pairs in 1:55:39.872979
+Finished 86200 pairs in 1:55:39.874979
+Finished 86300 pairs in 1:55:39.877979
+Finished 86400 pairs in 1:55:39.880979
+Finished 86500 pairs in 1:55:39.883979
+Finished 86600 pairs in 1:55:39.886980
+Finished 86700 pairs in 1:55:39.888978
+Finished 86800 pairs in 1:55:39.891979
+Finished 86900 pairs in 1:55:39.897001
+Finished 87000 pairs in 1:55:39.901985
+Finished 87100 pairs in 1:55:39.906988
+Finished 87200 pairs in 1:55:39.913981
+Finished 87300 pairs in 1:55:39.916979
+Finished 87400 pairs in 1:55:39.920982
+Finished 87500 pairs in 1:55:39.927010
+Finished 87600 pairs in 1:55:39.930999
+Finished 87700 pairs in 1:55:39.936979
+Finished 87800 pairs in 1:55:39.941992
+Finished 87900 pairs in 1:55:39.947990
+Finished 88000 pairs in 1:55:39.951980
+Finished 88100 pairs in 1:55:39.955982
+Finished 88200 pairs in 1:55:39.960980
+Finished 88300 pairs in 1:55:39.964977
+Finished 88400 pairs in 1:55:39.967984
+Finished 88500 pairs in 1:55:39.972978
+Finished 88600 pairs in 1:55:39.974978
+Finished 88700 pairs in 1:55:39.979012
+Finished 88800 pairs in 1:55:39.982979
+Finished 88900 pairs in 1:55:39.985977
+Finished 89000 pairs in 1:55:39.988977
+Finished 89100 pairs in 1:55:39.991982
+Finished 89200 pairs in 1:55:39.996977
+Finished 89300 pairs in 1:55:39.999977
+Finished 89400 pairs in 1:55:40.002997
+Finished 89500 pairs in 1:55:40.007985
+Finished 89600 pairs in 1:55:40.010988
+Finished 89700 pairs in 1:55:40.013983
+Finished 89800 pairs in 1:55:40.016977
+Finished 89900 pairs in 1:55:40.019978
+Finished 90000 pairs in 1:55:40.022983
+Finished 90100 pairs in 1:55:40.026000
+Finished 90200 pairs in 1:55:40.028984
+Finished 90300 pairs in 1:55:40.030982
+Finished 90300 pairs in 1:55:40.036984
+
+Process finished with exit code 0

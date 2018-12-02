@@ -24,10 +24,10 @@ def getFeatureVector(textureBlock, method=1):
         vector = get_CSLBCoP_vector(textureBlock)
 
     elif method == 2:
-        vector = LPQ(textureBlock,3)
+        vector = LPQ(textureBlock, 3)
 
     else:
-        raise AttributeError()
+        raise AttributeError("Method number not found in feature extraction")
 
     return vector
 

@@ -7,6 +7,7 @@ from FeatureExtraction import getFeatureVector
 from scipy.spatial import distance
 import time as t
 import datetime
+import operator
 
 
 def get_feature_vectors():
@@ -45,6 +46,7 @@ def get_feature_vectors():
     print("Finished all", forms_counter, "forms and", blocks_counter, "blocks in", datetime.timedelta(seconds=delta))
     print("Calculating distances and writing file...")
     pairs_counter = 0
+    # TODO make it combinatorial not a permutation
     with open("writer-distances.txt", "w") as f:
         for writer1 in writers_features_dict.keys():
             for writer2 in writers_features_dict.keys():
@@ -61,5 +63,15 @@ def get_feature_vectors():
     print("Finished", pairs_counter, "pairs in", datetime.timedelta(seconds=delta))
 
 
+def log_parser(log_filename):
+    writers_and_distances = []
+    with open(log_filename, "r") as f:
+        for line in f:
+            writers_and_distances.append([float(v) for v in line.rstrip().split(' ')])
+
+    writers_and_distances = sorted(writers_and_distances, key=operator.itemgetter(2))
+    return writers_and_distances
+
+
 if __name__ == '__main__':
-    get_feature_vectors()
+    log_parser(r"D:\Projects\Pattern_Recognition\Writer_Identification\writer-distances-run1.txt")
