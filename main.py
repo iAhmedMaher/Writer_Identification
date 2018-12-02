@@ -80,7 +80,7 @@ def processTrainingImages(dataPath, numWriters):
 				else:
 					X = getFeatureVector(textureBlock)
 				Y.append(form.split("_")[0])
-			availableForms.pop()
+			availableForms.pop(rndmForm)
 
 		if i==2:
 			rndmForm = random.randint(0, len(availableForms)-1)
