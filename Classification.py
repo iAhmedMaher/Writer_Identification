@@ -18,10 +18,13 @@ X_test: The input features for the test set.
 def predict_clf(Y_test, X_test):
 	global clf
 	prediction = clf.predict(X_test)
-	print(type(prediction))
-	print(type(Y_test))
+	print(Y_test)
+	print(prediction)
+	accuracy = sum(Y_test==prediction)/len(Y_test)
 	print("This paper belongs to class "+str(prediction))
-	print("The classification accuracy: "+str(sum(Y_test==prediction)/len(Y_test)))
+	print("The classification accuracy: "+str(accuracy))
+	if(accuracy<1):
+		exit()
 	return
 
 """AdaBoost Implementation
