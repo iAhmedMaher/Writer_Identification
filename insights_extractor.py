@@ -1,13 +1,14 @@
 import FLAGS
 import os
 import Utilities
-import Preprocessing as pre
 import skimage.io as io
-from FeatureExtraction import getFeatureVector
 from scipy.spatial import distance
 import time as t
 import datetime
+import numpy as np
 import operator
+import Preprocessing as pre
+from FeatureExtraction import getFeatureVector
 
 
 def get_feature_vectors():
@@ -37,7 +38,7 @@ def get_feature_vectors():
 
         if forms_counter % 100 == 0:
             delta = t.time() - start
-            print("Finished", forms_counter, "forms and", blocks_counter, "blocks in",datetime.timedelta(seconds=delta))
+            print("Finished", forms_counter, "forms and", blocks_counter, "blocks in", datetime.timedelta(seconds=delta))
 
     for writer in writers_features_count_dict.keys():
         writers_features_dict[writer] = writers_features_dict[writer]/writers_features_count_dict[writer]
@@ -71,7 +72,3 @@ def log_parser(log_filename):
 
     writers_and_distances = sorted(writers_and_distances, key=operator.itemgetter(2))
     return writers_and_distances
-
-
-if __name__ == '__main__':
-    log_parser(r"D:\Projects\Pattern_Recognition\Writer_Identification\writer-distances-run1.txt")

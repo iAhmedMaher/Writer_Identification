@@ -4,6 +4,38 @@ from skimage.feature import greycomatrix
 import skimage.io as io
 from skimage.color import rgb2gray
 from scipy.signal import convolve2d
+import FLAGS
+import keeper
+import Preprocessing as pre
+import datetime
+import os
+
+features_dict = {}
+for method in FLAGS.CACHE_FEATURE_VECTORS.keys():
+    if FLAGS.CACHE_FEATURE_VECTORS[method]:
+        features_dict[method] = keeper.get_tensor_list_dict_from_disk(FLAGS.FEATURE_VECTORS_PATH[method])
+
+
+def store_feature_vectors_of_list(form_filenames_list, method=0, log_filename=None):
+    if log_filename is None:
+        log_filename = 'feature_vector' + str(datetime.datetime.now()).replace(' ', '_').replace(':', '.') + '.txt'
+
+    keeper.store_tensor_list(form_filenames_list,
+                             lambda name: [getFeatureVector(b, method) for b in pre.get_texture_blocks(name)],
+                             log_filename)
+
+
+def store_all_feature_vectors(method=0, log_filename=None):
+    forms_filenames = [n for n in os.listdir(FLAGS.DEFAULT_DATASET_PATH)]
+    store_feature_vectors_of_list(forms_filenames, method, log_filename=log_filename)
+
+
+def get_form_feature_vectors(form_filename, method='LBP'):
+    if form_filename in features_dict[method]:
+        return features_dict[method][form_filename]
+    else:
+        [getFeatureVector(b, method) for b in pre.get_texture_blocks(form_filename)]
+
 
 def getFeatureVector(textureBlock, method=0):
     """
@@ -14,16 +46,16 @@ def getFeatureVector(textureBlock, method=0):
     return: numpy vector
     """
 
-    if method == 0:
+    if method == 'LBP' or method == 0:
         I_LBP = np.uint8(local_binary_pattern(textureBlock, 8, 1))
         # n_bins = I_LBP.max() + 1
         hist, bin_edges = np.histogram(I_LBP.ravel(), np.r_[0:256])  # ALERT
         vector = hist.reshape(1, -1)
 
-    elif method == 1:
+    elif method == 'CSLBCoP' or method == 1:
         vector = get_CSLBCoP_vector(textureBlock)
 
-    elif method == 2:
+    elif method == 'LPQ' or method == 2:
         vector = LPQ(textureBlock, 3)
 
     else:
@@ -38,7 +70,6 @@ def LPQ(textureBlock, winSize=3):
     STFTalpha = 1 / winSize
     sigmaS = (winSize - 1) / 4
     sigmaA = 8 / (winSize - 1)
-
 
     img = textureBlock.astype(np.float)
     radius = (winSize - 1) / 2
@@ -72,8 +103,9 @@ def LPQ(textureBlock, winSize=3):
     u7 = np.real(q4)
     u8 = np.imag(q4)
 
-    M = np.matrix([u1.flatten(1), u2.flatten(1), u3.flatten(1), u4.flatten(1), u5.flatten(1), u6.flatten(1), u7.flatten(1),
-                   u8.flatten(1)])
+    M = np.matrix(
+        [u1.flatten(1), u2.flatten(1), u3.flatten(1), u4.flatten(1), u5.flatten(1), u6.flatten(1), u7.flatten(1),
+         u8.flatten(1)])
 
     D = np.dot(np.dot(M, C), M.T)
     U, S, V = np.linalg.svd(D)
@@ -92,8 +124,9 @@ def LPQ(textureBlock, winSize=3):
     Fd = np.real(Qd)
     Gd = np.imag(Qd)
 
-    F = np.array([Fa.flatten(1), Ga.flatten(1), Fb.flatten(1), Gb.flatten(1), Fc.flatten(1), Gc.flatten(1), Fd.flatten(1),
-                  Gd.flatten(1)])
+    F = np.array(
+        [Fa.flatten(1), Ga.flatten(1), Fb.flatten(1), Gb.flatten(1), Fc.flatten(1), Gc.flatten(1), Fd.flatten(1),
+         Gd.flatten(1)])
     G = np.dot(V.T, F)
 
     t = 0
@@ -103,11 +136,11 @@ def LPQ(textureBlock, winSize=3):
             G[5, :] >= t) * 32 + (G[6, :] >= t) * 64 + (G[7, :] >= t) * 128
     B = np.reshape(B, np.shape(Fa))
 
-
     # And finally build the histogram:
     h, b = np.histogram(B, bins=256, range=(0, 255))
 
-    return h.reshape(1, -1) # return rows
+    return h.reshape(1, -1)  # return rows
+
 
 def euc_dist(X):
     Y = X = X.astype(np.float)
@@ -124,21 +157,21 @@ def euc_dist(X):
 
 def get_CSLBP(block, radius=1):
     new_image = np.zeros((len(block), len(block[0])))
-    padded_block = np.zeros((len(block)+2, len(block[0])+2))
-    padded_block[1:len(padded_block)-1, 1:len(padded_block[0])-1] = block
+    padded_block = np.zeros((len(block) + 2, len(block[0]) + 2))
+    padded_block[1:len(padded_block) - 1, 1:len(padded_block[0]) - 1] = block
 
     for x in range(len(block)):
         for y in range(len(block[x])):
-            i = x+1
-            j = y+1
+            i = x + 1
+            j = y + 1
             roi = padded_block
 
-            p = np.array([roi[i, j+1], roi[i+1, j+1], roi[i+1, j], roi[i+1, j-1]])
-            n = np.array([roi[i, j-1], roi[i-1, j-1], roi[i-1, j], roi[i-1, j+1]])
+            p = np.array([roi[i, j + 1], roi[i + 1, j + 1], roi[i + 1, j], roi[i + 1, j - 1]])
+            n = np.array([roi[i, j - 1], roi[i - 1, j - 1], roi[i - 1, j], roi[i - 1, j + 1]])
 
             T = 3.0
 
-            diff = p-n
+            diff = p - n
             diff[diff <= T] = 0.0
             diff[diff > T] = 1.0
 
@@ -148,17 +181,16 @@ def get_CSLBP(block, radius=1):
 
 
 def get_CSLBCoP_vector(img_block):
-
     cslbp_map = get_CSLBP(img_block)
-    angles = [0.0, np.pi/4, np.pi/2, 3*np.pi/4]
+    angles = [0.0, np.pi / 4, np.pi / 2, 3 * np.pi / 4]
     res = greycomatrix(cslbp_map.astype(int), [1], angles, levels=16)  # ALERT
     return np.array(res).reshape((1, -1))
 
 
 if __name__ == '__main__':
-
     print("Basic test:")
-    test_img = io.imread(r"E:\CUFE CHS\Semester 9 (Senior 2)\Pattern Recognition\Project\Writer_Identification\test_CSLBCoP.PNG")
+    test_img = io.imread(
+        r"E:\CUFE CHS\Semester 9 (Senior 2)\Pattern Recognition\Project\Writer_Identification\test_CSLBCoP.PNG")
     test_img = rgb2gray(test_img)
     feature = get_CSLBCoP_vector(test_img)
     print("Feature vector:", feature)

@@ -89,9 +89,9 @@ def print_performance_stats(train_forms_filenames,
 
 if __name__ == '__main__':
     train_forms = [
-        [r'E:\handwritten_dataset\113_b04-162.png'],
-        [r'E:\handwritten_dataset\107_b04-004.png'],
+        [r'E:\handwritten_dataset\180_d01-098.png'],
+        [r'E:\handwritten_dataset\560_n02-004.png'],
     ]
-    test_forms = [r'E:\handwritten_dataset\107_b04-000.png']
+    test_forms = [r'E:\handwritten_dataset\180_d01-104.png']
 
-    print_performance_stats(train_forms, test_forms, [1])
+    print_performance_stats(train_forms, test_forms, [0])
