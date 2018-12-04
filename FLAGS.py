@@ -5,12 +5,13 @@ DEFAULT_DATASET_PATH = TWO_FORM_DATASET_PATH
 CACHE_BLOCKS = False
 TEXTURE_BLOCKS_LOG_PATH = r'texture_blocks.txt'
 CACHE_FEATURE_VECTORS = {
-    'LBP': False,
-    'LPQ': False,
+    'LBP': True,
+    'LPQ': True,
     'CSLBCoP': False
 }
 FEATURE_VECTORS_PATH = {
     'LBP': r'LBP_feature_vectors.txt',
-    'LPQ': None,
+    'LPQ': r'LPQ_feature_vectors.txt',
     'CSLBCoP': None
 }
+DISTANCES_FILENAME = r'writer-distances.txt'

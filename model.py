@@ -6,7 +6,7 @@ import numpy as np
 import os
 
 
-def get_x_y_train(train_forms_filenames, writer_indices=None):
+def get_x_y_train(train_forms_filenames, method, writer_indices=None):
     Y_train = []
     X_train = None
 
@@ -14,8 +14,7 @@ def get_x_y_train(train_forms_filenames, writer_indices=None):
         label = writer_index if writer_indices is None else writer_indices[writer_index]
 
         for form_filename in writer_forms:
-            form = io.imread(form_filename)
-            feature_vectors = get_feature_vectors_from_form(form)
+            feature_vectors = np.concatenate(ft.get_form_feature_vectors(form_filename, method=method), axis=0)
             labels = [label] * len(feature_vectors)
 
             if X_train is None:
@@ -27,71 +26,38 @@ def get_x_y_train(train_forms_filenames, writer_indices=None):
     return X_train, Y_train
 
 
-def get_feature_vectors_from_form(form):
-    feature_vectors = None
-    texture_blocks = pre.Preprocessing(form)
-    for block in texture_blocks:
-        # SUG maybe this is not an optimized solution
-        if feature_vectors is None:
-            feature_vectors = ft.getFeatureVector(block)
-        else:
-            feature_vectors = np.concatenate([feature_vectors, ft.getFeatureVector(block)], axis=0)
+def get_guessed_writer(test_form, clf, feature_method, voting_method='majority'):
+    X_test = np.concatenate(ft.get_form_feature_vectors(test_form, method=feature_method), axis=0)
+    per_block_predictions = list(clf.predict(X_test))
 
-    return feature_vectors
+    if voting_method == 'majority':
+        guessed_writer = max(set(per_block_predictions), key=per_block_predictions.count)
+        confidence = per_block_predictions.count(guessed_writer) / len(per_block_predictions)
+    else:
+        raise NotImplementedError("No such method for guessing writer was implemented:", voting_method)
 
-
-def get_guessed_writer(test_form, clf):
-    per_block_predictions = list(clf.predict(get_feature_vectors_from_form(test_form)))  # SUG may not be optimum
-    guessed_writer = max(set(per_block_predictions), key=per_block_predictions.count)
-    confidence = per_block_predictions.count(guessed_writer) / len(per_block_predictions)
     return guessed_writer, confidence
 
 
-def get_predictions(test_forms_filenames, clf):
+def get_predictions(test_forms_filenames, clf, feature_method):
     predictions = []
     confidences = []
     for form_filename in test_forms_filenames:
-        form = io.imread(form_filename)
-        prediction, confidence = get_guessed_writer(form, clf)
+        prediction, confidence = get_guessed_writer(form_filename, clf, feature_method)
         predictions.append(prediction)
         confidences.append(confidence)
 
     return predictions, confidences
 
 
-def train(train_forms_filenames, clf):
-    X_train, Y_train = get_x_y_train(train_forms_filenames)
+def train(train_forms_filenames, clf, feature_method):
+    X_train, Y_train = get_x_y_train(train_forms_filenames, feature_method)
     clf.fit(X_train, Y_train)
     return clf
 
 
-def run_trial(train_forms_filenames, test_forms_filenames, clf):
-    clf = train(train_forms_filenames, clf)
-    return get_predictions(test_forms_filenames, clf)
+def run_trial(train_forms_filenames, test_forms_filenames, clf, feature_method='LBP'):
+    clf = train(train_forms_filenames, clf, feature_method)
+    return get_predictions(test_forms_filenames, clf, feature_method)
 
 
-def print_performance_stats(train_forms_filenames,
-                            test_forms_filenames,
-                            true_labels,
-                            clf=KNeighborsClassifier(n_neighbors=1)):
-    predictions, confidences = run_trial(train_forms_filenames, test_forms_filenames, clf)
-    predictions = np.array(predictions)
-    confidences = np.array(confidences)
-    true_labels = np.array(true_labels)
-
-    result = predictions == true_labels
-    accuracy = len(result[result]) / len(result) * 100
-    print("Accuracy:", accuracy, "%")
-    print("Average confidence:", np.average(confidences))
-    print("Confidences:")
-    print(confidences)
-
-
-if __name__ == '__main__':
-    train_forms = [
-        [r'E:\handwritten_dataset\180_d01-098.png'],
-        [r'E:\handwritten_dataset\560_n02-004.png'],
-    ]
-    test_forms = [r'E:\handwritten_dataset\180_d01-104.png']
-
-    print_performance_stats(train_forms, test_forms, [0])

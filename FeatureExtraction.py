@@ -9,11 +9,14 @@ import keeper
 import Preprocessing as pre
 import datetime
 import os
+import Utilities
 
 features_dict = {}
 for method in FLAGS.CACHE_FEATURE_VECTORS.keys():
     if FLAGS.CACHE_FEATURE_VECTORS[method]:
         features_dict[method] = keeper.get_tensor_list_dict_from_disk(FLAGS.FEATURE_VECTORS_PATH[method])
+    else:
+        features_dict[method] = {}
 
 
 def store_feature_vectors_of_list(form_filenames_list, method=0, log_filename=None):
@@ -34,7 +37,7 @@ def get_form_feature_vectors(form_filename, method='LBP'):
     if form_filename in features_dict[method]:
         return features_dict[method][form_filename]
     else:
-        [getFeatureVector(b, method) for b in pre.get_texture_blocks(form_filename)]
+        return [getFeatureVector(b, method) for b in pre.get_texture_blocks(form_filename)]
 
 
 def getFeatureVector(textureBlock, method=0):
