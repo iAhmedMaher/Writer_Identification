@@ -52,7 +52,7 @@ def Preprocessing(I, line_spacing=1 / 2, block_size=(128, 256)):
     # Load image and covert it to grayscale
     I = colors.rgb2gray(I)
     
-    if np.max(I)<1:
+    if np.max(I)<=1:
         I = np.array(255*I,dtype = np.uint8)
     
     # IAM Specific: Crop hand written part from the image
