@@ -1,37 +1,33 @@
-import Preprocessing as pre
 import FeatureExtraction as ft
-import skimage.io as io
-from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
-import os
 
 
-def get_x_y_train(train_forms_filenames, method, writer_indices=None):
+def get_x_y_train(train_forms_filenames, method):
     Y_train = []
     X_train = None
 
     for writer_index, writer_forms in enumerate(train_forms_filenames):
-        label = writer_index if writer_indices is None else writer_indices[writer_index]
+        label = writer_index
 
         for form_filename in writer_forms:
-            feature_vectors = np.concatenate(ft.get_form_feature_vectors(form_filename, method=method), axis=0)
+            feature_vectors = ft.get_form_feature_vectors(form_filename, methods=method)
             labels = [label] * len(feature_vectors)
 
             if X_train is None:
                 X_train = feature_vectors
             else:
-                X_train = np.concatenate([X_train, feature_vectors])
+                X_train = np.concatenate([X_train, feature_vectors], axis=0)
             Y_train = Y_train + labels
 
     return X_train, Y_train
 
 
 def get_guessed_writer(test_form, clf, feature_method, voting_method='majority'):
-    X_test = np.concatenate(ft.get_form_feature_vectors(test_form, method=feature_method), axis=0)
+    X_test = ft.get_form_feature_vectors(test_form, methods=feature_method)
     per_block_predictions = list(clf.predict(X_test))
 
     if voting_method == 'majority':
-        guessed_writer = max(set(per_block_predictions), key=per_block_predictions.count)
+        guessed_writer = max(set(per_block_predictions), key=per_block_predictions.count)  # ALERT on tie chooses first
         confidence = per_block_predictions.count(guessed_writer) / len(per_block_predictions)
     else:
         raise NotImplementedError("No such method for guessing writer was implemented:", voting_method)

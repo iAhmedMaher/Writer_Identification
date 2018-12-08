@@ -9,7 +9,7 @@ import FeatureExtraction as fe
 import itertools
 
 
-def get_feature_vectors():
+def get_feature_vectors(method):
     print("Starting...")
     start = t.time()
     forms_filenames = os.listdir(FLAGS.DEFAULT_DATASET_PATH)
@@ -21,7 +21,7 @@ def get_feature_vectors():
     for form_filename in forms_filenames:
         forms_counter += 1
         writer_id, form_id = Utilities.get_writer_form_id(form_filename)
-        feature_vectors = fe.get_form_feature_vectors(form_filename, method='LBP')
+        feature_vectors = fe.get_form_feature_vectors(form_filename, methods=method)
         for vector in feature_vectors:
             blocks_counter += 1
             if writer_id in writers_features_count_dict:
@@ -72,5 +72,18 @@ def get_top_hardest_writers(num_of_writers):
     return list(writers_set)
 
 
+def get_hardest_pairs(num_of_writers):
+    writers_pairs_list = []
+    with open(FLAGS.DISTANCES_FILENAME, "r") as f:
+        for line in f:
+            line = line.rstrip().split(' ')
+            writers_pairs_list.append([line[0], line[1]])
+
+            if len(writers_pairs_list) >= num_of_writers:
+                return list(writers_pairs_list)
+
+    return writers_pairs_list
+
+
 if __name__ == '__main__':
-    print(get_top_hardest_writers(2))
+    pass

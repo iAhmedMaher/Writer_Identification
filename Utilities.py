@@ -1,6 +1,8 @@
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neural_network import MLPClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.svm import SVC
 import FLAGS
 import os
@@ -20,11 +22,18 @@ def get_writer_form_id(filename):
     return filename[:i], filename[i+1:len(filename)-4]
 
 
+def get_list_of_all_writers():
+    return list(set([get_writer_form_id(f)[0] for f in os.listdir(FLAGS.DEFAULT_DATASET_PATH)]))
+
+
 def map_str_to_clf(clf_string):
     clfs_dict = {
         'tree'  : DecisionTreeClassifier(max_depth=1, random_state=1),
         'kNN'   : KNeighborsClassifier(n_neighbors=3),
         'SVC'   : SVC(C=1.0, kernel='linear'),
+        'rnd'   : RandomClassifier(),
+        'MLP'   : MLPClassifier(hidden_layer_sizes=(64, 32, 16, 4)),
+        'GBC'   : GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=1, random_state=0),
         'ada'   : AdaBoostClassifier(KNeighborsClassifier(n_neighbors=3),
                                  n_estimators=50,
                                  learning_rate=1.5,
@@ -34,7 +43,26 @@ def map_str_to_clf(clf_string):
     if clf_string in clfs_dict:
         return clfs_dict[clf_string]
     else:
-        raise NotImplementedError("No such classifer option exist:", clf_string)
+        raise NotImplementedError("No such classifier option exists:", clf_string)
+
+
+class RandomClassifier(object):
+    def __init__(self, numbers_of_writers=3):
+        self.next_count = 0
+        self.numbers_of_writers = numbers_of_writers
+
+    def get_next_prediction(self):
+        return self.next_count
+
+    def predict(self, X_test):
+        predictions = []
+        for _ in X_test:
+            predictions.append(self.get_next_prediction())
+
+        return predictions
+
+    def fit(self, X_train, Y_train):
+        pass
 
 
 def get_size(obj, seen=None):

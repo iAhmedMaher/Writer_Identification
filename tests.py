@@ -4,6 +4,8 @@ import Utilities
 import insights_extractor
 import itertools
 from sklearn.neighbors import KNeighborsClassifier
+import random
+import datetime
 
 
 def run_different_experiments(train_forms_filenames, test_forms_filenames, settings):
@@ -41,31 +43,49 @@ def get_train_test_from_writers_list(wids_str_list, max_train_forms):
     return train_forms, test_forms
 
 
-def get_train_test_iterations(num_of_iterations, mode, num_writers_per_iteration, max_train_forms):
+def get_train_test_iterations(counter, mode, num_writers_per_iteration, max_train_forms):
     if mode == 'hardest':
-        # TODO wrong argument to get top hardest writers
         wids_ncr = itertools.combinations(
-            insights_extractor.get_top_hardest_writers(np.power(num_of_iterations, num_writers_per_iteration)),
-            num_writers_per_iteration)
+            insights_extractor.get_top_hardest_writers(counter), num_writers_per_iteration)
         batches = []
         for w_combination in wids_ncr:
             batches.append(get_train_test_from_writers_list(w_combination, max_train_forms))
-            if len(batches) == num_of_iterations:
-                return batches
+        return batches
+
+    elif mode == 'random':
+        all_writers = Utilities.get_list_of_all_writers()
+        sample_writers = [all_writers[i] for i in random.sample(range(len(all_writers)), counter)]
+        wids_ncr = itertools.combinations(sample_writers, num_writers_per_iteration)
+        batches = []
+        for w_combination in wids_ncr:
+            batches.append(get_train_test_from_writers_list(w_combination, max_train_forms))
+        return batches
+
+    elif mode == 'hardest_pair':
+        wids_ncr = insights_extractor.get_hardest_pairs(counter)
+        batches = []
+        for w_combination in wids_ncr:
+            batches.append(get_train_test_from_writers_list(w_combination, max_train_forms))
+        return batches
 
     else:
         raise NotImplementedError("No iteration builder mode called:", mode)
 
 
 def print_performance_stats(settings,
-                            num_of_iterations=100,
+                            counter=100,
                             mode='hardest',
                             num_writers_per_iteration=3,
-                            max_train_forms=2):
-    batches = get_train_test_iterations(num_of_iterations, mode, num_writers_per_iteration, max_train_forms)
+                            max_train_forms=2,
+                            store_wrong_classification=False):
+    print("Starting test ...")
+    print("Getting batches ...")
+    batches = get_train_test_iterations(counter, mode, num_writers_per_iteration, max_train_forms)
 
     result = None
-    for batch in batches:
+    print("Computing training and testing ...")
+    wrong_classifications = []  # ALERT works only on single classifer and feature
+    for i, batch in enumerate(batches):
         predictions, confidences = run_different_experiments(batch[0], batch[1], settings)
         predictions = np.array(predictions).T
         confidences = np.array(confidences).T
@@ -76,21 +96,46 @@ def print_performance_stats(settings,
         else:
             result = np.concatenate([result, predictions == true_labels], axis=0)
 
+        if store_wrong_classification:
+            filter = np.array(predictions != true_labels).reshape(-1, )
+            if len(np.array(batch[1])[filter]) != 0:
+                filter = np.array(predictions != true_labels).reshape(-1,)
+                wrong_classifications.append([
+                    batch[0],
+                    np.array(batch[1])[filter],
+                    np.array(predictions)[filter],
+                    np.array(true_labels)[filter]
+                ])
+
+        if i % 100 == 0:
+            print('Current batch number:', i)
+
+    if store_wrong_classification:
+        log_filename = 'wrong_classifications' + str(datetime.datetime.now()).replace(' ', '_').replace(':', '.') + '.txt'
+        with open(log_filename, 'w') as f:
+            for wrongie in wrong_classifications:
+                f.write('Training forms:\n')
+                for i, writer_forms in enumerate(wrongie[0]):
+                    f.write('Writer'+str(i)+': ')
+                    for writer_form in writer_forms:
+                        f.write(writer_form + ', ')
+
+                    f.write('\n')
+
+                f.write('Test forms wrongly classified:\n')
+                for i in range(len(wrongie[1])):
+                    f.write('Form '+wrongie[1][i] + ' classified as ' + str(wrongie[2][i]) + ' while it is ' + str(wrongie[3][i]) + '\n')
+
+                f.write("***********\n")
+
+
     accuracies = 100 * np.count_nonzero(result, axis=0) / len(result)
     print("Accuracies", accuracies)
 
 
 if __name__ == '__main__':
-    '''
-    As you can see, you can test multiple classifiers (str or object) with multiple feature options,
-    this will run SVC+LBP, SVC+LPQ, & kNN+LBQ. If we want SVC+(LBP;LQP) (i.e concatenated), we would simply make an
-    option in FeatureExtraction to return concatenated feature vectors and the caching would still work. For knowing
-    correct string of classifier/string check Utilities/FeatureExtraction file respectively. The other thing you need
-    to configure is FLAGS file to match your needs and paths. May the odds ever be in your favor.
-    
-    Notice, if it will train on w1, w2, w3, it will also test on w1, w2, w3.
-    '''
-    print_performance_stats([['SVC', ['LBP', 'LPQ']],
-                             [KNeighborsClassifier(n_neighbors=1), ['LBP', 'LPQ']]],
-                            mode='hardest',
-                            num_of_iterations=100)
+    print_performance_stats([['SVC', ['LPQ']]],
+                            mode='hardest_pair',
+                            num_writers_per_iteration=2,
+                            counter=20,
+                            store_wrong_classification=True)

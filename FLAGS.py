@@ -12,6 +12,6 @@ CACHE_FEATURE_VECTORS = {
 FEATURE_VECTORS_PATH = {
     'LBP': r'LBP_feature_vectors.txt',
     'LPQ': r'LPQ_feature_vectors.txt',
-    'CSLBCoP': None
+    'CSLBCoP': r'CSLBCoP_feature_vectors.txt'
 }
-DISTANCES_FILENAME = r'writer-distances.txt'
+DISTANCES_FILENAME = r'writer_distances_LPQ.txt'

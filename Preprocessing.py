@@ -129,7 +129,7 @@ def Preprocessing(I, line_spacing=1 / 2, block_size=(128, 256)):
 
 # Modeule test
 if __name__ == "__main__":
-    blocks = Preprocessing(io.imread("Training//336_g06-018e.png"))
+    blocks = Preprocessing(io.imread(os.path.join(FLAGS.DEFAULT_DATASET_PATH, '393_h07-087.png')))
     for block in blocks:
         io.imshow(block)
         io.show()

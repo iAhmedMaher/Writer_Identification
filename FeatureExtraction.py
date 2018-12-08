@@ -9,7 +9,7 @@ import keeper
 import Preprocessing as pre
 import datetime
 import os
-import Utilities
+
 
 features_dict = {}
 for method in FLAGS.CACHE_FEATURE_VECTORS.keys():
@@ -33,7 +33,20 @@ def store_all_feature_vectors(method=0, log_filename=None):
     store_feature_vectors_of_list(forms_filenames, method, log_filename=log_filename)
 
 
-def get_form_feature_vectors(form_filename, method='LBP'):
+def get_form_feature_vectors(form_filename, methods='LBP'):
+    methods = methods.split(';')
+    vectors = None
+    for method in methods:
+        features_list = get_form_feature_vectors_no_concat(form_filename, method)
+        if vectors is None:
+            vectors = np.array(features_list).reshape((len(features_list), -1))
+        else:
+            vectors = np.concatenate([vectors, np.array(features_list).reshape((len(features_list), -1))], axis=1)
+
+    return vectors
+
+
+def get_form_feature_vectors_no_concat(form_filename, method='LBP'):
     if form_filename in features_dict[method]:
         return features_dict[method][form_filename]
     else:
@@ -50,10 +63,7 @@ def getFeatureVector(textureBlock, method=0):
     """
 
     if method == 'LBP' or method == 0:
-        I_LBP = np.uint8(local_binary_pattern(textureBlock, 8, 1))
-        # n_bins = I_LBP.max() + 1
-        hist, bin_edges = np.histogram(I_LBP.ravel(), np.r_[0:256])  # ALERT
-        vector = hist.reshape(1, -1)
+        vector = LBP(textureBlock)
 
     elif method == 'CSLBCoP' or method == 1:
         vector = get_CSLBCoP_vector(textureBlock)
@@ -65,6 +75,13 @@ def getFeatureVector(textureBlock, method=0):
         raise AttributeError("Method number not found in feature extraction")
 
     return vector
+
+
+def LBP(textureBlock):
+    I_LBP = np.uint8(local_binary_pattern(textureBlock, 8, 1))
+    # n_bins = I_LBP.max() + 1
+    hist, bin_edges = np.histogram(I_LBP.ravel(), np.r_[0:256])  # ALERT
+    return hist.reshape(1, -1)
 
 
 def LPQ(textureBlock, winSize=3):

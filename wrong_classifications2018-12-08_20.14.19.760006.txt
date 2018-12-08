@@ -1,0 +1,10 @@
+Training forms:
+Writer0: 559_n02-000.png, 
+Writer1: 85_a06-124.png, 85_a06-134.png, 
+Test forms wrongly classified:
+Form 85_e07-000.png classified as [0] while it is [1]
+Training forms:
+Writer0: 158_c04-008.png, 158_c04-013.png, 
+Writer1: 488_l04-106.png, 
+Test forms wrongly classified:
+Form 158_e04-000.png classified as [1] while it is [0]
