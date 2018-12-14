@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Project TA Test Case
+data/
+
 # Distribution / packaging
 .Python
 build/

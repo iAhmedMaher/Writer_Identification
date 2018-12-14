@@ -9,7 +9,7 @@ import FLAGS
 import os
 import keeper
 import datetime
-
+import time
 # IMPORTANT NOTE:
 # all points in my code are expressed as tuples of format (y, x)
 # all rectangles, expect those returned by build-in openCV functions, are defined as tuple of 2 points (P1,P2)
@@ -45,7 +45,7 @@ def get_texture_blocks(form_filename, dataset_directory=FLAGS.DEFAULT_DATASET_PA
 # I: Raw Image
 # [line_spacing = 1/2]: spacing between each line multiplied by average height of the line
 # [block_size = (128, 256)]: Block size (height, width).
-# [IAM_dataset = True]: set this boolean to True if we are using IAM dataset, False otherwise
+# [IAM_dataset = True]: set this boolean to True if we are using IAM dataset, False otherwise 
 # Outputs:
 # List of 2D binary Blocks
 
@@ -56,42 +56,10 @@ def Preprocessing(I, line_spacing=1/2, block_size=(128, 256), IAM_dataset = True
     #Fix Contrast
     if np.max(I)<=1:
         I = np.array(255*I,dtype = np.uint8)
-
+    
     #IAM Specific: Crop hand written part from the image
     if IAM_dataset:
-        (h,w) = np.shape(I)
-
-        cumulativegraph_horizontal = np.zeros((h))
-        sobelgraph_horizontal = np.zeros((h))
-        thershold = filters.threshold_otsu(I)
-        Ibw = np.zeros((h, w), dtype=np.uint8)
-        Ibw[I >= thershold] = 1
-        I_sobel = filters.sobel_h(Ibw)
-
-        for i in range(h):
-            cumulativegraph_horizontal[i] = np.sum(1 - Ibw[i,:])
-            sobelgraph_horizontal[i] = np.sum(np.abs(I_sobel[i,:]))
-
-
-        cumulativegraph_horizontal[cumulativegraph_horizontal<0.26*w] = 0
-
-        final = cumulativegraph_horizontal * sobelgraph_horizontal
-
-        final[final<final.max()*0.7] = 0
-
-        end  =  h - (final[int(h/2):][::-1]!=0).argmax()
-
-        start  =  int(h/2) - (final[:int(h/2)][::-1]!=0).argmax()
-
-        #print((start,end))
-        I = I[start:end,:]
-        io.imshow(I)
-        io.show()
-
-        #Uncomment if you want to see how horizontal projection
-        graphs.plot(np.r_[0:h],final)
-        graphs.show()
-
+        I = I[900:2800,:]
 
     (h, w) = np.shape(I)
 
@@ -100,8 +68,8 @@ def Preprocessing(I, line_spacing=1/2, block_size=(128, 256), IAM_dataset = True
     Ibw = np.zeros((h, w), dtype=np.uint8)
     Ibw[I >= thershold] = 1
     #I[I >= thershold] = 255
-
-
+    
+    
     # fix scanning problems
     if IAM_dataset:
         Ibw[:, :50] = 1
@@ -125,7 +93,7 @@ def Preprocessing(I, line_spacing=1/2, block_size=(128, 256), IAM_dataset = True
     h_total = 0
     n = 0
 
-    I_Compact = 255 - np.zeros((2 * h, 2 * w), dtype=np.uint8)
+    I_Compact = 255 - np.zeros((h, w), dtype=np.uint8)
 
     for cnt in contours[::-1]:
         (x, y, ww, hh) = cv2.boundingRect(cnt)
@@ -171,7 +139,16 @@ def Preprocessing(I, line_spacing=1/2, block_size=(128, 256), IAM_dataset = True
 
 # Modeule test
 if __name__ == "__main__":
-    blocks = Preprocessing(io.imread(os.path.join(FLAGS.DEFAULT_DATASET_PATH, '393_h07-087.png')))
-    for block in blocks:
-        io.imshow(block)
-        io.show()
+    start = time.process_time()
+    blocks = Preprocessing(io.imread(r"data\01\test.PNG"))
+    blocks = Preprocessing(io.imread(r"data\01\1\1.PNG"))
+    blocks = Preprocessing(io.imread(r"data\01\1\2.PNG"))
+    blocks = Preprocessing(io.imread(r"data\01\2\1.PNG"))
+    blocks = Preprocessing(io.imread(r"data\01\2\2.PNG"))
+    blocks = Preprocessing(io.imread(r"data\01\3\1.PNG"))
+    blocks = Preprocessing(io.imread(r"data\01\3\2.PNG"))
+    end = time.process_time()
+    print((end-start))
+    #for block in blocks:
+    #    io.imshow(block)
+    #    io.show()
