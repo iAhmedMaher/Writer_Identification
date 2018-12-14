@@ -128,14 +128,13 @@ def print_performance_stats(settings,
 
                 f.write("***********\n")
 
-
     accuracies = 100 * np.count_nonzero(result, axis=0) / len(result)
     print("Accuracies", accuracies)
 
 
 if __name__ == '__main__':
     print_performance_stats([['SVC', ['LPQ']]],
-                            mode='hardest_pair',
-                            num_writers_per_iteration=2,
+                            mode='random',
+                            num_writers_per_iteration=3,
                             counter=20,
                             store_wrong_classification=True)

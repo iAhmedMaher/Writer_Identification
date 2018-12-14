@@ -5,8 +5,8 @@ DEFAULT_DATASET_PATH = TWO_FORM_DATASET_PATH
 CACHE_BLOCKS = False
 TEXTURE_BLOCKS_LOG_PATH = r'texture_blocks.txt'
 CACHE_FEATURE_VECTORS = {
-    'LBP': True,
-    'LPQ': True,
+    'LBP': False,
+    'LPQ': False,
     'CSLBCoP': False
 }
 FEATURE_VECTORS_PATH = {
