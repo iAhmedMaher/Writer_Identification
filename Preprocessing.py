@@ -15,14 +15,6 @@ import datetime
 # all rectangles, expect those returned by build-in openCV functions, are defined as tuple of 2 points (P1,P2)
 # where P1 is the top-left point and P2 is the right-bottom point
 
-# Preprocessing Step:
-# Inputs:
-# I: Raw Image
-# [line_spacing = 1/2]: spacing between each line multiplied by average height of the line
-# [block_size = (128, 256)]: Block size (height, width).
-# Outputs:
-# List of 2D binary Blocks
-
 blocks_dict = {}
 if FLAGS.CACHE_BLOCKS:
     blocks = keeper.get_tensor_list_dict_from_disk(FLAGS.TEXTURE_BLOCKS_LOG_PATH)
@@ -48,23 +40,72 @@ def get_texture_blocks(form_filename, dataset_directory=FLAGS.DEFAULT_DATASET_PA
         return Preprocessing(form_image)
 
 
-def Preprocessing(I, line_spacing=1 / 2, block_size=(128, 256)):
+# Preprocessing Step:
+# Inputs:
+# I: Raw Image
+# [line_spacing = 1/2]: spacing between each line multiplied by average height of the line
+# [block_size = (128, 256)]: Block size (height, width).
+# [IAM_dataset = True]: set this boolean to True if we are using IAM dataset, False otherwise
+# Outputs:
+# List of 2D binary Blocks
+
+def Preprocessing(I, line_spacing=1/2, block_size=(128, 256), IAM_dataset = True):
     # Load image and covert it to grayscale
     I = colors.rgb2gray(I)
 
-    # IAM Specific: Crop hand written part from the image
-    I = I[730:2690, :]
+    #Fix Contrast
+    if np.max(I)<=1:
+        I = np.array(255*I,dtype = np.uint8)
+
+    #IAM Specific: Crop hand written part from the image
+    if IAM_dataset:
+        (h,w) = np.shape(I)
+
+        cumulativegraph_horizontal = np.zeros((h))
+        sobelgraph_horizontal = np.zeros((h))
+        thershold = filters.threshold_otsu(I)
+        Ibw = np.zeros((h, w), dtype=np.uint8)
+        Ibw[I >= thershold] = 1
+        I_sobel = filters.sobel_h(Ibw)
+
+        for i in range(h):
+            cumulativegraph_horizontal[i] = np.sum(1 - Ibw[i,:])
+            sobelgraph_horizontal[i] = np.sum(np.abs(I_sobel[i,:]))
+
+
+        cumulativegraph_horizontal[cumulativegraph_horizontal<0.26*w] = 0
+
+        final = cumulativegraph_horizontal * sobelgraph_horizontal
+
+        final[final<final.max()*0.7] = 0
+
+        end  =  h - (final[int(h/2):][::-1]!=0).argmax()
+
+        start  =  int(h/2) - (final[:int(h/2)][::-1]!=0).argmax()
+
+        #print((start,end))
+        I = I[start:end,:]
+        io.imshow(I)
+        io.show()
+
+        #Uncomment if you want to see how horizontal projection
+        graphs.plot(np.r_[0:h],final)
+        graphs.show()
+
+
     (h, w) = np.shape(I)
 
     # Convert to binary image using adaptive thersholding technique (Otsu Method)
     thershold = filters.threshold_otsu(I)
     Ibw = np.zeros((h, w), dtype=np.uint8)
     Ibw[I >= thershold] = 1
-    # I[I >= thershold] = 255
+    #I[I >= thershold] = 255
+
 
     # fix scanning problems
-    Ibw[:, :50] = 1
-    Ibw[:, w - 50:] = 1
+    if IAM_dataset:
+        Ibw[:, :50] = 1
+        Ibw[:, w - 50:] = 1
 
     ''' CONNECTED COMPOMENTS + Texture Blocks'''
     # Using same procedure (not fully) explained in the paper
@@ -101,6 +142,7 @@ def Preprocessing(I, line_spacing=1 / 2, block_size=(128, 256)):
             I_Compact[begin_y:begin_y + hh, start_x:start_x + ww] = np.minimum(I[y:y + hh, x:x + ww],
                                                                                I_Compact[begin_y:begin_y + hh,
                                                                                start_x:start_x + ww])
+
 
             start_x = start_x + ww
             h_total = h_total + hh
