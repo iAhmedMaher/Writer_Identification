@@ -7,7 +7,7 @@ import Utilities
 F_results = open("results.txt","w")
 F_time = open("time.txt","w")
 
-def run_iteration(iteration_path, clf, feature_method='LPQ'):
+def run_iteration(iteration_path, clf, feature_method='LPQ', voting_method='majority'):
     global F_results
     test_data = [os.path.join(iteration_path,'test.PNG')]
     writers_data = []
@@ -22,7 +22,7 @@ def run_iteration(iteration_path, clf, feature_method='LPQ'):
         
             writers_data.append(current_writer)   
 
-    output = model.run_trial(writers_data,  test_data, clf, feature_method)
+    output = model.run_trial(writers_data,  test_data, clf, feature_method, voting_method)
     print(output)
     F_results.write(str(output[0][0]+1))
     F_results.write("\n")
@@ -36,7 +36,7 @@ for file in files:
     full_path = os.path.join(path,file)
     if os.path.isdir(full_path):
         start = time.process_time()
-        run_iteration(full_path, Utilities.map_str_to_clf('kNN'), 'LBP;LPQ')
+        run_iteration(full_path, Utilities.map_str_to_clf('kNN'), 'LBP;LPQ', 'confidence_sum')
         end = time.process_time()
         F_time.write(str(round(end-start, 2)))
         F_time.write("\n")

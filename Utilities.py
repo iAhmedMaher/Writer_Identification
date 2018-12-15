@@ -30,7 +30,7 @@ def map_str_to_clf(clf_string):
     clfs_dict = {
         'tree'  : DecisionTreeClassifier(max_depth=1, random_state=1),
         'kNN'   : KNeighborsClassifier(n_neighbors=3),
-        'SVC'   : SVC(C=1.0, kernel='linear'),
+        'SVC'   : SVC(C=1.0, kernel='linear', probability=True),
         'rnd'   : RandomClassifier(),
         'MLP'   : MLPClassifier(hidden_layer_sizes=(64, 32, 16, 4)),
         'GBC'   : GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=1, random_state=0),

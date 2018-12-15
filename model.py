@@ -24,22 +24,26 @@ def get_x_y_train(train_forms_filenames, method):
 
 def get_guessed_writer(test_form, clf, feature_method, voting_method='majority'):
     X_test = ft.get_form_feature_vectors(test_form, methods=feature_method)
-    per_block_predictions = list(clf.predict(X_test))
 
     if voting_method == 'majority':
+        per_block_predictions = list(clf.predict(X_test))
         guessed_writer = max(set(per_block_predictions), key=per_block_predictions.count)  # ALERT on tie chooses first
         confidence = per_block_predictions.count(guessed_writer) / len(per_block_predictions)
+    elif voting_method == 'confidence_sum':
+        per_block_predictions = list(np.sum(clf.predict_proba(X_test), 0) / len(X_test))
+        guessed_writer = np.argmax(per_block_predictions)
+        confidence = per_block_predictions[guessed_writer]
     else:
         raise NotImplementedError("No such method for guessing writer was implemented:", voting_method)
 
     return guessed_writer, confidence
 
 
-def get_predictions(test_forms_filenames, clf, feature_method):
+def get_predictions(test_forms_filenames, clf, feature_method, voting_method):
     predictions = []
     confidences = []
     for form_filename in test_forms_filenames:
-        prediction, confidence = get_guessed_writer(form_filename, clf, feature_method)
+        prediction, confidence = get_guessed_writer(form_filename, clf, feature_method, voting_method)
         predictions.append(prediction)
         confidences.append(confidence)
 
@@ -52,8 +56,8 @@ def train(train_forms_filenames, clf, feature_method):
     return clf
 
 
-def run_trial(train_forms_filenames, test_forms_filenames, clf, feature_method='LBP'):
+def run_trial(train_forms_filenames, test_forms_filenames, clf, feature_method='LBP', voting_method='majority'):
     clf = train(train_forms_filenames, clf, feature_method)
-    return get_predictions(test_forms_filenames, clf, feature_method)
+    return get_predictions(test_forms_filenames, clf, feature_method, voting_method)
 
 
