@@ -51,30 +51,27 @@ def get_texture_blocks(form_filename, dataset_directory=FLAGS.DEFAULT_DATASET_PA
 
 def Preprocessing(I, line_spacing=1/2, block_size=(128, 256), IAM_dataset = True):
     # Load image and covert it to grayscale
-    I = colors.rgb2gray(I)
-
+    I = cv2.cvtColor(I, cv2.COLOR_BGR2GRAY)
+    
     #Fix Contrast
     if np.max(I)<=1:
         I = np.array(255*I,dtype = np.uint8)
-    
+
     #IAM Specific: Crop hand written part from the image
     if IAM_dataset:
         I = I[900:2800,:]
-
     (h, w) = np.shape(I)
 
     # Convert to binary image using adaptive thersholding technique (Otsu Method)
-    thershold = filters.threshold_otsu(I)
-    Ibw = np.zeros((h, w), dtype=np.uint8)
-    Ibw[I >= thershold] = 1
-    #I[I >= thershold] = 255
-    
+    th,Ibw = cv2.threshold(I,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+    #I[I >= th] = 255
+
     
     # fix scanning problems
     if IAM_dataset:
-        Ibw[:, :50] = 1
-        Ibw[:, w - 50:] = 1
-
+        Ibw[:, :50] = 255
+        Ibw[:, w - 50:] = 255
+      
     ''' CONNECTED COMPOMENTS + Texture Blocks'''
     # Using same procedure (not fully) explained in the paper
     texture_blocks = []
@@ -83,7 +80,7 @@ def Preprocessing(I, line_spacing=1/2, block_size=(128, 256), IAM_dataset = True
     widths = []
 
     # Find connected components using build-in OpenCV function
-    contours = cv2.findContours((1 - Ibw) * 255, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[1]
+    contours = cv2.findContours(255 - Ibw , cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[1]
 
     margin_y = 200
     margin_x = 50
