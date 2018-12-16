@@ -32,7 +32,7 @@ def get_guessed_writer(test_form, clf, feature_method, voting_method='majority')
     elif voting_method == 'confidence_sum':
         per_block_predictions = list(np.sum(clf.predict_proba(X_test), 0) / len(X_test))
         guessed_writer = np.argmax(per_block_predictions)
-        confidence = per_block_predictions[guessed_writer]
+        confidence = per_block_predictions[int(guessed_writer)]
     else:
         raise NotImplementedError("No such method for guessing writer was implemented:", voting_method)
 
@@ -56,7 +56,7 @@ def train(train_forms_filenames, clf, feature_method):
     return clf
 
 
-def run_trial(train_forms_filenames, test_forms_filenames, clf, feature_method='LBP', voting_method='majority'):
+def run_trial(train_forms_filenames, test_forms_filenames, clf, feature_method, voting_method):
     clf = train(train_forms_filenames, clf, feature_method)
     return get_predictions(test_forms_filenames, clf, feature_method, voting_method)
 

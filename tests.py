@@ -8,7 +8,7 @@ import random
 import datetime
 
 
-def run_different_experiments(train_forms_filenames, test_forms_filenames, settings):
+def run_different_experiments(train_forms_filenames, test_forms_filenames, settings, voting_method):
     predictions = []
     confidences = []
     for row in settings:
@@ -17,7 +17,11 @@ def run_different_experiments(train_forms_filenames, test_forms_filenames, setti
             clf = Utilities.map_str_to_clf(clf)
 
         for feature_option in row[1]:
-            prediction, confidence = model.run_trial(train_forms_filenames, test_forms_filenames, clf, feature_option)
+            prediction, confidence = model.run_trial(train_forms_filenames,
+                                                     test_forms_filenames,
+                                                     clf,
+                                                     feature_option,
+                                                     voting_method)
             predictions.append(prediction)
             confidences.append(confidence)
 
@@ -73,6 +77,7 @@ def get_train_test_iterations(counter, mode, num_writers_per_iteration, max_trai
 
 
 def print_performance_stats(settings,
+                            voting_method='majority',
                             counter=100,
                             mode='hardest',
                             num_writers_per_iteration=3,
@@ -86,7 +91,7 @@ def print_performance_stats(settings,
     print("Computing training and testing ...")
     wrong_classifications = []  # ALERT works only on single classifer and feature
     for i, batch in enumerate(batches):
-        predictions, confidences = run_different_experiments(batch[0], batch[1], settings)
+        predictions, confidences = run_different_experiments(batch[0], batch[1], settings, voting_method=voting_method)
         predictions = np.array(predictions).T
         confidences = np.array(confidences).T
         true_labels = np.array(range(num_writers_per_iteration)).reshape((-1, 1))
@@ -133,8 +138,32 @@ def print_performance_stats(settings,
 
 
 if __name__ == '__main__':
-    print_performance_stats([['SVC', ['LPQ']]],
+    # ALERT for store_wrong_classification use one Feature option and classifier
+    print_performance_stats([['SVC', ['LPQ', 'LBP', 'LBP;LPQ']],
+                             ['kNN', ['LPQ', 'LBP', 'LBP;LPQ']]],
                             mode='random',
                             num_writers_per_iteration=3,
-                            counter=20,
-                            store_wrong_classification=True)
+                            counter=70,
+                            store_wrong_classification=False,
+                            voting_method='confidence_sum')
+    print_performance_stats([['SVC', ['LPQ', 'LBP', 'LBP;LPQ']],
+                             ['kNN', ['LPQ', 'LBP', 'LBP;LPQ']]],
+                            mode='random',
+                            num_writers_per_iteration=3,
+                            counter=70,
+                            store_wrong_classification=False,
+                            voting_method='confidence_sum')
+    print_performance_stats([['SVC', ['LPQ', 'LBP', 'LBP;LPQ']],
+                             ['kNN', ['LPQ', 'LBP', 'LBP;LPQ']]],
+                            mode='random',
+                            num_writers_per_iteration=3,
+                            counter=70,
+                            store_wrong_classification=False,
+                            voting_method='majority')
+    print_performance_stats([['SVC', ['LPQ', 'LBP', 'LBP;LPQ']],
+                             ['kNN', ['LPQ', 'LBP', 'LBP;LPQ']]],
+                            mode='random',
+                            num_writers_per_iteration=3,
+                            counter=70,
+                            store_wrong_classification=False,
+                            voting_method='majority')

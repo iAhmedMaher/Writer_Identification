@@ -133,7 +133,6 @@ def Preprocessing(I, line_spacing=1/2, block_size=(128, 256), IAM_dataset = True
 
     return texture_blocks
 
-
 # Modeule test
 if __name__ == "__main__":
     start = time.process_time()

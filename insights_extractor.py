@@ -86,4 +86,4 @@ def get_hardest_pairs(num_of_writers):
 
 
 if __name__ == '__main__':
-    pass
+    get_feature_vectors('LPQ')
