@@ -36,7 +36,7 @@ for file in files:
     full_path = os.path.join(path,file)
     if os.path.isdir(full_path):
         start = time.process_time()
-        run_iteration(full_path, Utilities.map_str_to_clf('kNN'), 'LBP;LPQ', 'confidence_sum')
+        run_iteration(full_path, Utilities.map_str_to_clf('kNN'), 'LBP;LPQ', 'square_confidence_sum')
         end = time.process_time()
         F_time.write(str(round(end-start, 2)))
         F_time.write("\n")

@@ -32,7 +32,12 @@ def get_guessed_writer(test_form, clf, feature_method, voting_method='majority')
     elif voting_method == 'confidence_sum':
         per_block_predictions = list(np.sum(clf.predict_proba(X_test), 0) / len(X_test))
         guessed_writer = np.argmax(per_block_predictions)
-        confidence = per_block_predictions[int(guessed_writer)]
+        confidence = per_block_predictions[guessed_writer]
+    elif voting_method == 'square_confidence_sum':
+        per_block_predictions = np.sum(np.power(clf.predict_proba(X_test),2), 0)
+        per_block_predictions = per_block_predictions / np.sum(per_block_predictions)
+        guessed_writer = np.argmax(per_block_predictions)
+        confidence = per_block_predictions[guessed_writer]
     else:
         raise NotImplementedError("No such method for guessing writer was implemented:", voting_method)
 
